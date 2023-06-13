@@ -679,7 +679,7 @@ SWIFT_CLASS("_TtC5MFSDK23MFExecutePaymentRequest")
 @property (nonatomic, copy) NSArray<MFSupplier *> * _Nonnull suppliers;
 @property (nonatomic, copy) NSString * _Nonnull sessionId;
 @property (nonatomic, strong) MFRecurringModel * _Nullable recurringModel;
-- (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue paymentMethod:(NSInteger)paymentMethod callBackUrl:(NSString * _Nonnull)callBackUrl errorUrl:(NSString * _Nonnull)errorUrl OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue paymentMethod:(NSInteger)paymentMethod callBackUrl:(NSString * _Nonnull)callBackUrl errorUrl:(NSString * _Nonnull)errorUrl OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("callBackURL and errorURL are no longer in use");
 - (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue paymentMethod:(NSInteger)paymentMethod OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue displayCurrencyIso:(enum MFCurrencyISO)displayCurrencyIso OBJC_DESIGNATED_INITIALIZER;
@@ -879,6 +879,12 @@ typedef SWIFT_ENUM(NSInteger, MFPaymentMethodCode, open) {
   MFPaymentMethodCodeStcPay = 11,
 };
 
+typedef SWIFT_ENUM(NSInteger, MFPaymentProvider, open) {
+  MFPaymentProviderCardView = 0,
+  MFPaymentProviderApplePay = 1,
+  MFPaymentProviderGoogle = 2,
+};
+
 
 SWIFT_CLASS("_TtC5MFSDK16MFPaymentRequest")
 @interface MFPaymentRequest : NSObject
@@ -890,34 +896,18 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFPaymentReq
 
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
+- (void)cancelRecurringPaymentWithRecurringId:(NSString * _Nonnull)recurringId apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(BOOL, MFFailResponse * _Nullable))completion;
+@end
+
+
+
+@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
 - (void)cancelTokenWithToken:(NSString * _Nonnull)token apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(BOOL, MFFailResponse * _Nullable))completion;
 @end
 
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)cancelRecurringPaymentWithRecurringId:(NSString * _Nonnull)recurringId apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(BOOL, MFFailResponse * _Nullable))completion;
-@end
-
-@class MFPaymentStatusRequest;
-
-@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)getPaymentStatusWithPaymentStatus:(MFPaymentStatusRequest * _Nonnull)paymentStatus apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable))completion;
-@end
-
-
-@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)executeApplePayPaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion SWIFT_AVAILABILITY(ios,introduced=13);
-@end
-
-
-
-@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
 - (void)executeApplePayPaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request urlScheme:(NSString * _Nonnull)urlScheme apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion SWIFT_AVAILABILITY(ios,obsoleted=13.0,message="Please use 'executeApplePayPaymentWithRequest:apiLanguage:completion:' instead") SWIFT_AVAILABILITY(ios,introduced=9.0);
-@end
-
-
-@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)initiatePaymentWithRequest:(MFInitiatePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiatePaymentResponse * _Nullable, MFFailResponse * _Nullable))completion;
 @end
 
 @class MFSendPaymentRequest;
@@ -929,8 +919,24 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFPaymentReq
 
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)initiateSessionWithRequest:(MFInitiateSessionRequest * _Nullable)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
-- (void)initiateSessionWithApiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
+- (void)executeApplePayPaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion SWIFT_AVAILABILITY(ios,introduced=13);
+@end
+
+
+
+@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
+- (void)initiatePaymentWithRequest:(MFInitiatePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiatePaymentResponse * _Nullable, MFFailResponse * _Nullable))completion;
+@end
+
+@class MFPaymentStatusRequest;
+
+@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
+- (void)getPaymentStatusWithPaymentStatus:(MFPaymentStatusRequest * _Nonnull)paymentStatus apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable))completion;
+@end
+
+
+@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
+- (void)executePaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion;
 @end
 
 enum MFRecurringTypeEnum : NSInteger;
@@ -942,7 +948,8 @@ enum MFRecurringTypeEnum : NSInteger;
 
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)executePaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion;
+- (void)initiateSessionWithRequest:(MFInitiateSessionRequest * _Nullable)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
+- (void)initiateSessionWithApiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
 @end
 
 
@@ -1022,9 +1029,7 @@ SWIFT_CLASS("_TtC5MFSDK20MFSendPaymentRequest")
 @property (nonatomic, copy) NSArray<MFProduct *> * _Nonnull invoiceItems;
 @property (nonatomic) enum MFLanguage language;
 @property (nonatomic, copy) NSDate * _Nullable expiryDate;
-@property (nonatomic, copy) NSString * _Nonnull errorUrl;
 @property (nonatomic, strong) MFCustomerAddress * _Nullable customerAddress;
-@property (nonatomic, copy) NSString * _Nonnull callBackUrl;
 @property (nonatomic, copy) NSString * _Nonnull userDefinedField;
 @property (nonatomic) NSInteger supplierCode;
 @property (nonatomic) NSDecimal supplierValue;
@@ -1061,6 +1066,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFSettings *
 @end
 
 
+
 SWIFT_CLASS("_TtC5MFSDK10MFSupplier")
 @interface MFSupplier : NSObject
 @property (nonatomic) NSInteger supplierCode;
@@ -1080,7 +1086,16 @@ SWIFT_CLASS("_TtC5MFSDK7MFTheme")
 @property (nonatomic, strong) UIColor * _Nonnull navigationBarTintColor;
 @property (nonatomic, copy) NSString * _Nonnull navigationTitle;
 @property (nonatomic, copy) NSString * _Nonnull cancelButtonTitle;
-- (nonnull instancetype)initWithNavigationTintColor:(UIColor * _Nonnull)navigationTintColor navigationBarTintColor:(UIColor * _Nonnull)navigationBarTintColor navigationTitle:(NSString * _Nonnull)navigationTitle cancelButtonTitle:(NSString * _Nonnull)cancelButtonTitle OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic) BOOL showNavigationBar;
+- (nonnull instancetype)initWithNavigationTintColor:(UIColor * _Nonnull)navigationTintColor navigationBarTintColor:(UIColor * _Nonnull)navigationBarTintColor navigationTitle:(NSString * _Nonnull)navigationTitle cancelButtonTitle:(NSString * _Nonnull)cancelButtonTitle showNavigationBar:(BOOL)showNavigationBar OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC5MFSDK22MFUpdateSessionRequest")
+@interface MFUpdateSessionRequest : NSObject
+- (nonnull instancetype)initWithSessionId:(NSString * _Nonnull)sessionId tokenType:(NSString * _Nonnull)tokenType token:(NSString * _Nonnull)token OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1788,7 +1803,7 @@ SWIFT_CLASS("_TtC5MFSDK23MFExecutePaymentRequest")
 @property (nonatomic, copy) NSArray<MFSupplier *> * _Nonnull suppliers;
 @property (nonatomic, copy) NSString * _Nonnull sessionId;
 @property (nonatomic, strong) MFRecurringModel * _Nullable recurringModel;
-- (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue paymentMethod:(NSInteger)paymentMethod callBackUrl:(NSString * _Nonnull)callBackUrl errorUrl:(NSString * _Nonnull)errorUrl OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue paymentMethod:(NSInteger)paymentMethod callBackUrl:(NSString * _Nonnull)callBackUrl errorUrl:(NSString * _Nonnull)errorUrl OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("callBackURL and errorURL are no longer in use");
 - (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue paymentMethod:(NSInteger)paymentMethod OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue displayCurrencyIso:(enum MFCurrencyISO)displayCurrencyIso OBJC_DESIGNATED_INITIALIZER;
@@ -1988,6 +2003,12 @@ typedef SWIFT_ENUM(NSInteger, MFPaymentMethodCode, open) {
   MFPaymentMethodCodeStcPay = 11,
 };
 
+typedef SWIFT_ENUM(NSInteger, MFPaymentProvider, open) {
+  MFPaymentProviderCardView = 0,
+  MFPaymentProviderApplePay = 1,
+  MFPaymentProviderGoogle = 2,
+};
+
 
 SWIFT_CLASS("_TtC5MFSDK16MFPaymentRequest")
 @interface MFPaymentRequest : NSObject
@@ -1999,34 +2020,18 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFPaymentReq
 
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
+- (void)cancelRecurringPaymentWithRecurringId:(NSString * _Nonnull)recurringId apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(BOOL, MFFailResponse * _Nullable))completion;
+@end
+
+
+
+@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
 - (void)cancelTokenWithToken:(NSString * _Nonnull)token apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(BOOL, MFFailResponse * _Nullable))completion;
 @end
 
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)cancelRecurringPaymentWithRecurringId:(NSString * _Nonnull)recurringId apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(BOOL, MFFailResponse * _Nullable))completion;
-@end
-
-@class MFPaymentStatusRequest;
-
-@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)getPaymentStatusWithPaymentStatus:(MFPaymentStatusRequest * _Nonnull)paymentStatus apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable))completion;
-@end
-
-
-@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)executeApplePayPaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion SWIFT_AVAILABILITY(ios,introduced=13);
-@end
-
-
-
-@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
 - (void)executeApplePayPaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request urlScheme:(NSString * _Nonnull)urlScheme apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion SWIFT_AVAILABILITY(ios,obsoleted=13.0,message="Please use 'executeApplePayPaymentWithRequest:apiLanguage:completion:' instead") SWIFT_AVAILABILITY(ios,introduced=9.0);
-@end
-
-
-@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)initiatePaymentWithRequest:(MFInitiatePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiatePaymentResponse * _Nullable, MFFailResponse * _Nullable))completion;
 @end
 
 @class MFSendPaymentRequest;
@@ -2038,8 +2043,24 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFPaymentReq
 
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)initiateSessionWithRequest:(MFInitiateSessionRequest * _Nullable)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
-- (void)initiateSessionWithApiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
+- (void)executeApplePayPaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion SWIFT_AVAILABILITY(ios,introduced=13);
+@end
+
+
+
+@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
+- (void)initiatePaymentWithRequest:(MFInitiatePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiatePaymentResponse * _Nullable, MFFailResponse * _Nullable))completion;
+@end
+
+@class MFPaymentStatusRequest;
+
+@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
+- (void)getPaymentStatusWithPaymentStatus:(MFPaymentStatusRequest * _Nonnull)paymentStatus apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable))completion;
+@end
+
+
+@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
+- (void)executePaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion;
 @end
 
 enum MFRecurringTypeEnum : NSInteger;
@@ -2051,7 +2072,8 @@ enum MFRecurringTypeEnum : NSInteger;
 
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)executePaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion;
+- (void)initiateSessionWithRequest:(MFInitiateSessionRequest * _Nullable)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
+- (void)initiateSessionWithApiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
 @end
 
 
@@ -2131,9 +2153,7 @@ SWIFT_CLASS("_TtC5MFSDK20MFSendPaymentRequest")
 @property (nonatomic, copy) NSArray<MFProduct *> * _Nonnull invoiceItems;
 @property (nonatomic) enum MFLanguage language;
 @property (nonatomic, copy) NSDate * _Nullable expiryDate;
-@property (nonatomic, copy) NSString * _Nonnull errorUrl;
 @property (nonatomic, strong) MFCustomerAddress * _Nullable customerAddress;
-@property (nonatomic, copy) NSString * _Nonnull callBackUrl;
 @property (nonatomic, copy) NSString * _Nonnull userDefinedField;
 @property (nonatomic) NSInteger supplierCode;
 @property (nonatomic) NSDecimal supplierValue;
@@ -2170,6 +2190,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFSettings *
 @end
 
 
+
 SWIFT_CLASS("_TtC5MFSDK10MFSupplier")
 @interface MFSupplier : NSObject
 @property (nonatomic) NSInteger supplierCode;
@@ -2189,7 +2210,16 @@ SWIFT_CLASS("_TtC5MFSDK7MFTheme")
 @property (nonatomic, strong) UIColor * _Nonnull navigationBarTintColor;
 @property (nonatomic, copy) NSString * _Nonnull navigationTitle;
 @property (nonatomic, copy) NSString * _Nonnull cancelButtonTitle;
-- (nonnull instancetype)initWithNavigationTintColor:(UIColor * _Nonnull)navigationTintColor navigationBarTintColor:(UIColor * _Nonnull)navigationBarTintColor navigationTitle:(NSString * _Nonnull)navigationTitle cancelButtonTitle:(NSString * _Nonnull)cancelButtonTitle OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic) BOOL showNavigationBar;
+- (nonnull instancetype)initWithNavigationTintColor:(UIColor * _Nonnull)navigationTintColor navigationBarTintColor:(UIColor * _Nonnull)navigationBarTintColor navigationTitle:(NSString * _Nonnull)navigationTitle cancelButtonTitle:(NSString * _Nonnull)cancelButtonTitle showNavigationBar:(BOOL)showNavigationBar OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC5MFSDK22MFUpdateSessionRequest")
+@interface MFUpdateSessionRequest : NSObject
+- (nonnull instancetype)initWithSessionId:(NSString * _Nonnull)sessionId tokenType:(NSString * _Nonnull)tokenType token:(NSString * _Nonnull)token OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

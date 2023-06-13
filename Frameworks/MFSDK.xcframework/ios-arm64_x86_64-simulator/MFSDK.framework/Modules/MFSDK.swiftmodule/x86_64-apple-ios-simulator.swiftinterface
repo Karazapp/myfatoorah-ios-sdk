@@ -4,12 +4,23 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 @_exported import MFSDK
+import PassKit
 import SafariServices
 import Swift
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+@objc public enum MFPaymentProvider : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case cardView
+  case applePay
+  case google
+  public var rawValue: MFSDK.MFPaymentProvider.RawValue {
+    get
+  }
+  public init?(rawValue: MFSDK.MFPaymentProvider.RawValue)
+}
 @objc public enum MFKeyType : Swift.Int, Swift.RawRepresentable {
   public typealias RawValue = Swift.String
   case invoiceId
@@ -200,9 +211,7 @@ extension MFSDK.MFPaymentRequest {
   @objc public var invoiceItems: [MFSDK.MFProduct]
   @objc public var language: MFSDK.MFLanguage
   @objc public var expiryDate: Foundation.Date?
-  @objc public var errorUrl: Swift.String
   @objc public var customerAddress: MFSDK.MFCustomerAddress?
-  @objc public var callBackUrl: Swift.String
   @objc public var userDefinedField: Swift.String
   @objc public var supplierCode: Swift.Int
   @objc public var supplierValue: Foundation.Decimal
@@ -254,7 +263,8 @@ extension MFSDK.MFPaymentRequest {
   @objc public var navigationBarTintColor: UIKit.UIColor
   @objc public var navigationTitle: Swift.String
   @objc public var cancelButtonTitle: Swift.String
-  @objc public init(navigationTintColor: UIKit.UIColor, navigationBarTintColor: UIKit.UIColor, navigationTitle: Swift.String, cancelButtonTitle: Swift.String)
+  @objc public var showNavigationBar: Swift.Bool
+  @objc public init(navigationTintColor: UIKit.UIColor, navigationBarTintColor: UIKit.UIColor, navigationTitle: Swift.String, cancelButtonTitle: Swift.String, showNavigationBar: Swift.Bool = true)
   @objc deinit
 }
 @objcMembers @objc public class MFInvoiceTransaction : ObjectiveC.NSObject, Swift.Codable {
@@ -357,7 +367,8 @@ extension MFSDK.MFPaymentRequest {
   @objc public var suppliers: [MFSDK.MFSupplier]
   @objc public var sessionId: Swift.String
   @objc public var recurringModel: MFSDK.MFRecurringModel?
-  @objc public init(invoiceValue: Foundation.Decimal, paymentMethod: Swift.Int, callBackUrl: Swift.String, errorUrl: Swift.String)
+  @objc @available(*, deprecated, message: "callBackURL and errorURL are no longer in use")
+  public init(invoiceValue: Foundation.Decimal, paymentMethod: Swift.Int, callBackUrl: Swift.String, errorUrl: Swift.String)
   @objc public init(invoiceValue: Foundation.Decimal, paymentMethod: Swift.Int)
   @objc public init(invoiceValue: Foundation.Decimal)
   @objc public init(invoiceValue: Foundation.Decimal, displayCurrencyIso: MFSDK.MFCurrencyISO)
@@ -411,6 +422,10 @@ extension MFSDK.MFPaymentRequest {
   @objc @available(swift, obsoleted: 1.0)
   public init(recurringTypeEnum: MFSDK.MFRecurringTypeEnum, intervalDays: Swift.Int, iteration: Swift.Int)
   public init(recurringType: MFSDK.MFRecurringType, iteration: Swift.Int = 0)
+  @objc deinit
+}
+@objcMembers @objc public class MFUpdateSessionRequest : ObjectiveC.NSObject {
+  @objc public init(sessionId: Swift.String, tokenType: Swift.String, token: Swift.String)
   @objc deinit
 }
 @objcMembers @objc public class MFDirectPaymentResponse : ObjectiveC.NSObject {
@@ -498,6 +513,7 @@ extension MFSDK.MFPaymentRequest {
   @available(iOS 13.0, *)
   public func executeApplePayPayment(request: MFSDK.MFExecutePaymentRequest, apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (Swift.Result<MFSDK.MFPaymentStatusResponse, MFSDK.MFFailResponse>, _ invoiceId: Swift.String?) -> Swift.Void)
 }
+public typealias PaymentCompletionHandler = ((Swift.Result<MFSDK.MFPaymentStatusResponse, MFSDK.MFFailResponse>, _ invoiceId: Swift.String?) -> Swift.Void)
 @objc public enum MFCurrencyISO : Swift.Int, Swift.RawRepresentable {
   public typealias RawValue = Swift.String
   case kuwait_KWD
@@ -797,6 +813,8 @@ public enum MFRecurringType {
   @objc override dynamic public init()
   @objc deinit
 }
+extension MFSDK.MFPaymentProvider : Swift.Equatable {}
+extension MFSDK.MFPaymentProvider : Swift.Hashable {}
 extension MFSDK.MFKeyType : Swift.Equatable {}
 extension MFSDK.MFKeyType : Swift.Hashable {}
 extension MFSDK.MFEnvironment : Swift.Equatable {}
