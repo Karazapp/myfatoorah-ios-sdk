@@ -301,43 +301,21 @@ SWIFT_CLASS("_TtC5MFSDK16MFApplePayButton")
 - (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
-@class UIColor;
-
-SWIFT_CLASS("_TtC5MFSDK11MFBoxShadow")
-@interface MFBoxShadow : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong, getter=default) MFBoxShadow * _Nonnull default_;)
-+ (MFBoxShadow * _Nonnull)default SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithHOffset:(CGFloat)hOffset vOffset:(CGFloat)vOffset blur:(CGFloat)blur spread:(CGFloat)spread color:(UIColor * _Nonnull)color OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic) CGFloat hOffset;
-@property (nonatomic) CGFloat vOffset;
-@property (nonatomic) CGFloat blur;
-@property (nonatomic) CGFloat spread;
-@property (nonatomic, strong) UIColor * _Nonnull color;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 @class MFCardPlaceholder;
 @class MFCardLabel;
 @class MFCardTheme;
-@class MFCardInput;
-enum MFFontFamily : NSInteger;
 
 SWIFT_CLASS("_TtC5MFSDK22MFCardConfigureBuilder")
 @interface MFCardConfigureBuilder : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong, getter=default) MFCardConfigureBuilder * _Nonnull default_;)
 + (MFCardConfigureBuilder * _Nonnull)default SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithPlaceholder:(MFCardPlaceholder * _Nonnull)placeholder label:(MFCardLabel * _Nonnull)label theme:(MFCardTheme * _Nonnull)theme input:(MFCardInput * _Nonnull)input OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPlaceholder:(MFCardPlaceholder * _Nonnull)placeholder label:(MFCardLabel * _Nonnull)label theme:(MFCardTheme * _Nonnull)theme OBJC_DESIGNATED_INITIALIZER;
 - (void)setPlaceholder:(MFCardPlaceholder * _Nonnull)placeholder;
 - (void)setLabel:(MFCardLabel * _Nonnull)label;
 - (void)setTheme:(MFCardTheme * _Nonnull)theme;
-- (void)setCardInput:(MFCardInput * _Nonnull)cardInput;
 - (void)setBorderWidth:(CGFloat)borderWidth;
 - (void)setBorderRadius:(CGFloat)borderRadius;
 - (void)setFontSize:(CGFloat)fontSize;
-- (void)setHideCardIcon:(BOOL)hideCardIcon;
-- (void)setBoxShadow:(MFBoxShadow * _Nonnull)boxShadow;
-- (void)setFontFamily:(enum MFFontFamily)fontFamily;
 - (MFCardConfigureBuilder * _Nonnull)build SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -363,30 +341,16 @@ SWIFT_CLASS("_TtC5MFSDK18MFCardInfoResponse")
 @end
 
 
-SWIFT_CLASS("_TtC5MFSDK11MFCardInput")
-@interface MFCardInput : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong, getter=default) MFCardInput * _Nonnull default_;)
-+ (MFCardInput * _Nonnull)default SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithInputHeight:(CGFloat)inputHeight inputMargin:(CGFloat)inputMargin OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic) CGFloat inputHeight;
-@property (nonatomic) CGFloat inputMargin;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-enum MFFontWeight : NSInteger;
-
 SWIFT_CLASS("_TtC5MFSDK11MFCardLabel")
 @interface MFCardLabel : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong, getter=default) MFCardLabel * _Nonnull default_;)
 + (MFCardLabel * _Nonnull)default SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithCardHolderNameLabel:(NSString * _Nonnull)cardHolderNameLabel cardNumberLabel:(NSString * _Nonnull)cardNumberLabel expiryDateLabel:(NSString * _Nonnull)expiryDateLabel cvvLabel:(NSString * _Nonnull)cvvLabel showLabels:(BOOL)showLabels fontWeight:(enum MFFontWeight)fontWeight OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCardHolderNameLabel:(NSString * _Nonnull)cardHolderNameLabel cardNumberLabel:(NSString * _Nonnull)cardNumberLabel expiryDateLabel:(NSString * _Nonnull)expiryDateLabel cvvLabel:(NSString * _Nonnull)cvvLabel showLabels:(BOOL)showLabels OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, copy) NSString * _Nonnull cardHolderNameLabel;
 @property (nonatomic, copy) NSString * _Nonnull cardNumberLabel;
 @property (nonatomic, copy) NSString * _Nonnull expiryDateLabel;
 @property (nonatomic, copy) NSString * _Nonnull cvvLabel;
 @property (nonatomic) BOOL showLabels;
-@property (nonatomic) enum MFFontWeight fontWeight;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -405,17 +369,17 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong, getter=defau
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class UIColor;
 enum MFLanguage : NSInteger;
 
 SWIFT_CLASS("_TtC5MFSDK11MFCardTheme")
 @interface MFCardTheme : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong, getter=default) MFCardTheme * _Nonnull default_;)
 + (MFCardTheme * _Nonnull)default SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithInputColor:(UIColor * _Nonnull)inputColor labelColor:(UIColor * _Nonnull)labelColor errorColor:(UIColor * _Nonnull)errorColor borderColor:(UIColor * _Nonnull)borderColor OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithInputColor:(UIColor * _Nonnull)inputColor labelColor:(UIColor * _Nonnull)labelColor errorColor:(UIColor * _Nonnull)errorColor OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) UIColor * _Nonnull inputColor;
 @property (nonatomic, strong) UIColor * _Nonnull labelColor;
 @property (nonatomic, strong) UIColor * _Nonnull errorColor;
-@property (nonatomic, strong) UIColor * _Nonnull borderColor;
 @property (nonatomic) enum MFLanguage language;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -679,7 +643,7 @@ SWIFT_CLASS("_TtC5MFSDK23MFExecutePaymentRequest")
 @property (nonatomic, copy) NSArray<MFSupplier *> * _Nonnull suppliers;
 @property (nonatomic, copy) NSString * _Nonnull sessionId;
 @property (nonatomic, strong) MFRecurringModel * _Nullable recurringModel;
-- (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue paymentMethod:(NSInteger)paymentMethod callBackUrl:(NSString * _Nonnull)callBackUrl errorUrl:(NSString * _Nonnull)errorUrl OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("callBackURL and errorURL are no longer in use");
+- (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue paymentMethod:(NSInteger)paymentMethod callBackUrl:(NSString * _Nonnull)callBackUrl errorUrl:(NSString * _Nonnull)errorUrl OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue paymentMethod:(NSInteger)paymentMethod OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithInvoiceValue:(NSDecimal)invoiceValue displayCurrencyIso:(enum MFCurrencyISO)displayCurrencyIso OBJC_DESIGNATED_INITIALIZER;
@@ -695,32 +659,6 @@ SWIFT_CLASS("_TtC5MFSDK14MFFailResponse")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-typedef SWIFT_ENUM(NSInteger, MFFontFamily, open) {
-  MFFontFamilySansSerif = 0,
-  MFFontFamilyArial = 1,
-  MFFontFamilyTimesNewRoman = 2,
-  MFFontFamilyHelvetica = 3,
-  MFFontFamilyTahoma = 4,
-  MFFontFamilyVerdana = 5,
-  MFFontFamilyMonaco = 6,
-  MFFontFamilyGeorgia = 7,
-  MFFontFamilyCourierNew = 8,
-  MFFontFamilyGaramond = 9,
-  MFFontFamilyTrebuchetMS = 10,
-};
-
-typedef SWIFT_ENUM(NSInteger, MFFontWeight, open) {
-  MFFontWeightThin = 0,
-  MFFontWeightExtraLight = 1,
-  MFFontWeightLight = 2,
-  MFFontWeightNormal = 3,
-  MFFontWeightMedium = 4,
-  MFFontWeightSemiBold = 5,
-  MFFontWeightBold = 6,
-  MFFontWeightExtraBold = 7,
-  MFFontWeightHeavy = 8,
-};
 
 
 SWIFT_CLASS("_TtC5MFSDK28MFInApplePayConfigureBuilder")
@@ -834,7 +772,6 @@ SWIFT_CLASS("_TtC5MFSDK17MFPaymentCardView")
 - (void)layoutSubviews;
 - (void)loadWithInitiateSession:(MFInitiateSessionResponse * _Nonnull)initiateSession binDidChangeCompletion:(void (^ _Nullable)(NSString * _Nonnull))binDidChangeCompletion;
 - (void)pay:(MFExecutePaymentRequest * _Nonnull)request :(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion;
-- (void)validateWithValidateSessionCompletionObjC:(void (^ _Nonnull)(NSString * _Nullable, MFFailResponse * _Nullable))validateSessionCompletionObjC;
 @end
 
 
@@ -879,12 +816,6 @@ typedef SWIFT_ENUM(NSInteger, MFPaymentMethodCode, open) {
   MFPaymentMethodCodeStcPay = 11,
 };
 
-typedef SWIFT_ENUM(NSInteger, MFPaymentProvider, open) {
-  MFPaymentProviderCardView = 0,
-  MFPaymentProviderApplePay = 1,
-  MFPaymentProviderGoogle = 2,
-};
-
 
 SWIFT_CLASS("_TtC5MFSDK16MFPaymentRequest")
 @interface MFPaymentRequest : NSObject
@@ -900,9 +831,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFPaymentReq
 @end
 
 
-
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
 - (void)cancelTokenWithToken:(NSString * _Nonnull)token apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(BOOL, MFFailResponse * _Nullable))completion;
+@end
+
+
+
+@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
+- (void)initiatePaymentWithRequest:(MFInitiatePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiatePaymentResponse * _Nullable, MFFailResponse * _Nullable))completion;
 @end
 
 
@@ -917,17 +853,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFPaymentReq
 - (void)sendPaymentWithRequest:(MFSendPaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFSendPaymentResponse * _Nullable, MFFailResponse * _Nullable))completion;
 @end
 
-
-@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)executeApplePayPaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion SWIFT_AVAILABILITY(ios,introduced=13);
-@end
-
-
-
-@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)initiatePaymentWithRequest:(MFInitiatePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiatePaymentResponse * _Nullable, MFFailResponse * _Nullable))completion;
-@end
-
 @class MFPaymentStatusRequest;
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
@@ -936,7 +861,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFPaymentReq
 
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)executePaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion;
+- (void)executeApplePayPaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion SWIFT_AVAILABILITY(ios,introduced=13);
+@end
+
+
+@interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
+- (void)initiateSessionWithRequest:(MFInitiateSessionRequest * _Nullable)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
+- (void)initiateSessionWithApiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
 @end
 
 enum MFRecurringTypeEnum : NSInteger;
@@ -948,8 +879,7 @@ enum MFRecurringTypeEnum : NSInteger;
 
 
 @interface MFPaymentRequest (SWIFT_EXTENSION(MFSDK))
-- (void)initiateSessionWithRequest:(MFInitiateSessionRequest * _Nullable)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
-- (void)initiateSessionWithApiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFInitiateSessionResponse * _Nullable, MFFailResponse * _Nullable))completion;
+- (void)executePaymentWithRequest:(MFExecutePaymentRequest * _Nonnull)request apiLanguage:(enum MFAPILanguage)apiLanguage completion:(void (^ _Nonnull)(MFPaymentStatusResponse * _Nullable, MFFailResponse * _Nullable, NSString * _Nullable))completion;
 @end
 
 
@@ -1029,7 +959,9 @@ SWIFT_CLASS("_TtC5MFSDK20MFSendPaymentRequest")
 @property (nonatomic, copy) NSArray<MFProduct *> * _Nonnull invoiceItems;
 @property (nonatomic) enum MFLanguage language;
 @property (nonatomic, copy) NSDate * _Nullable expiryDate;
+@property (nonatomic, copy) NSString * _Nonnull errorUrl;
 @property (nonatomic, strong) MFCustomerAddress * _Nullable customerAddress;
+@property (nonatomic, copy) NSString * _Nonnull callBackUrl;
 @property (nonatomic, copy) NSString * _Nonnull userDefinedField;
 @property (nonatomic) NSInteger supplierCode;
 @property (nonatomic) NSDecimal supplierValue;
@@ -1066,7 +998,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFSettings *
 @end
 
 
-
 SWIFT_CLASS("_TtC5MFSDK10MFSupplier")
 @interface MFSupplier : NSObject
 @property (nonatomic) NSInteger supplierCode;
@@ -1086,16 +1017,7 @@ SWIFT_CLASS("_TtC5MFSDK7MFTheme")
 @property (nonatomic, strong) UIColor * _Nonnull navigationBarTintColor;
 @property (nonatomic, copy) NSString * _Nonnull navigationTitle;
 @property (nonatomic, copy) NSString * _Nonnull cancelButtonTitle;
-@property (nonatomic) BOOL showNavigationBar;
-- (nonnull instancetype)initWithNavigationTintColor:(UIColor * _Nonnull)navigationTintColor navigationBarTintColor:(UIColor * _Nonnull)navigationBarTintColor navigationTitle:(NSString * _Nonnull)navigationTitle cancelButtonTitle:(NSString * _Nonnull)cancelButtonTitle showNavigationBar:(BOOL)showNavigationBar OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC5MFSDK22MFUpdateSessionRequest")
-@interface MFUpdateSessionRequest : NSObject
-- (nonnull instancetype)initWithSessionId:(NSString * _Nonnull)sessionId tokenType:(NSString * _Nonnull)tokenType token:(NSString * _Nonnull)token OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNavigationTintColor:(UIColor * _Nonnull)navigationTintColor navigationBarTintColor:(UIColor * _Nonnull)navigationBarTintColor navigationTitle:(NSString * _Nonnull)navigationTitle cancelButtonTitle:(NSString * _Nonnull)cancelButtonTitle OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1104,7 +1026,6 @@ SWIFT_CLASS("_TtC5MFSDK22MFUpdateSessionRequest")
 @interface NSURL (SWIFT_EXTENSION(MFSDK))
 - (NSString * _Nullable)objectForKeyedSubscript:(NSString * _Nonnull)queryParam SWIFT_WARN_UNUSED_RESULT;
 @end
-
 
 
 @interface UINavigationController (SWIFT_EXTENSION(MFSDK))

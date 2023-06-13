@@ -16,268 +16,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MFPaymentProvider",
-        "printedName": "MFPaymentProvider",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "cardView",
-            "printedName": "cardView",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFPaymentProvider.Type) -> MFSDK.MFPaymentProvider",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFPaymentProvider",
-                    "printedName": "MFSDK.MFPaymentProvider",
-                    "usr": "c:@M@MFSDK@E@MFPaymentProvider"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFPaymentProvider.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFPaymentProvider",
-                        "printedName": "MFSDK.MFPaymentProvider",
-                        "usr": "c:@M@MFSDK@E@MFPaymentProvider"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFPaymentProvider@MFPaymentProviderCardView",
-            "mangledName": "$s5MFSDK17MFPaymentProviderO8cardViewyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 0
-          },
-          {
-            "kind": "Var",
-            "name": "applePay",
-            "printedName": "applePay",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFPaymentProvider.Type) -> MFSDK.MFPaymentProvider",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFPaymentProvider",
-                    "printedName": "MFSDK.MFPaymentProvider",
-                    "usr": "c:@M@MFSDK@E@MFPaymentProvider"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFPaymentProvider.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFPaymentProvider",
-                        "printedName": "MFSDK.MFPaymentProvider",
-                        "usr": "c:@M@MFSDK@E@MFPaymentProvider"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFPaymentProvider@MFPaymentProviderApplePay",
-            "mangledName": "$s5MFSDK17MFPaymentProviderO8applePayyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 1
-          },
-          {
-            "kind": "Var",
-            "name": "google",
-            "printedName": "google",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFPaymentProvider.Type) -> MFSDK.MFPaymentProvider",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFPaymentProvider",
-                    "printedName": "MFSDK.MFPaymentProvider",
-                    "usr": "c:@M@MFSDK@E@MFPaymentProvider"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFPaymentProvider.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFPaymentProvider",
-                        "printedName": "MFSDK.MFPaymentProvider",
-                        "usr": "c:@M@MFSDK@E@MFPaymentProvider"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFPaymentProvider@MFPaymentProviderGoogle",
-            "mangledName": "$s5MFSDK17MFPaymentProviderO6googleyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 2
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:5MFSDK17MFPaymentProviderO8rawValueSSvp",
-            "mangledName": "$s5MFSDK17MFPaymentProviderO8rawValueSSvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK17MFPaymentProviderO8rawValueSSvg",
-                "mangledName": "$s5MFSDK17MFPaymentProviderO8rawValueSSvg",
-                "moduleName": "MFSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MFSDK.MFPaymentProvider?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFPaymentProvider",
-                    "printedName": "MFSDK.MFPaymentProvider",
-                    "usr": "c:@M@MFSDK@E@MFPaymentProvider"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:5MFSDK17MFPaymentProviderO8rawValueACSgSS_tcfc",
-            "mangledName": "$s5MFSDK17MFPaymentProviderO8rawValueACSgSS_tcfc",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "c:@M@MFSDK@E@MFPaymentProvider",
-        "mangledName": "$s5MFSDK17MFPaymentProviderO",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "enumRawTypeName": "Int",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "MFKeyType",
         "printedName": "MFKeyType",
         "children": [
@@ -3055,7 +2793,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(cardHolderNameLabel:cardNumberLabel:expiryDateLabel:cvvLabel:showLabels:fontWeight:)",
+            "printedName": "init(cardHolderNameLabel:cardNumberLabel:expiryDateLabel:cvvLabel:showLabels:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3092,18 +2830,11 @@
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MFFontWeight",
-                "printedName": "MFSDK.MFFontWeight",
-                "hasDefaultArg": true,
-                "usr": "c:@M@MFSDK@E@MFFontWeight"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardLabel(im)initWithCardHolderNameLabel:cardNumberLabel:expiryDateLabel:cvvLabel:showLabels:fontWeight:",
-            "mangledName": "$s5MFSDK11MFCardLabelC014cardHolderNameC00d6NumberC0010expiryDateC003cvvC010showLabels10fontWeightACSS_S3SSbAA06MFFontN0Otcfc",
+            "usr": "c:@M@MFSDK@objc(cs)MFCardLabel(im)initWithCardHolderNameLabel:cardNumberLabel:expiryDateLabel:cvvLabel:showLabels:",
+            "mangledName": "$s5MFSDK11MFCardLabelC014cardHolderNameC00d6NumberC0010expiryDateC003cvvC010showLabelsACSS_S3SSbtcfc",
             "moduleName": "MFSDK",
             "declAttributes": [
               "AccessControl",
@@ -3572,98 +3303,6 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "fontWeight",
-            "printedName": "fontWeight",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MFFontWeight",
-                "printedName": "MFSDK.MFFontWeight",
-                "usr": "c:@M@MFSDK@E@MFFontWeight"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardLabel(py)fontWeight",
-            "mangledName": "$s5MFSDK11MFCardLabelC10fontWeightAA06MFFontE0Ovp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardLabel(im)fontWeight",
-                "mangledName": "$s5MFSDK11MFCardLabelC10fontWeightAA06MFFontE0Ovg",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardLabel(im)setFontWeight:",
-                "mangledName": "$s5MFSDK11MFCardLabelC10fontWeightAA06MFFontE0Ovs",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK11MFCardLabelC10fontWeightAA06MFFontE0OvM",
-                "mangledName": "$s5MFSDK11MFCardLabelC10fontWeightAA06MFFontE0OvM",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -3816,7 +3455,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(inputColor:labelColor:errorColor:borderColor:)",
+            "printedName": "init(inputColor:labelColor:errorColor:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3841,18 +3480,11 @@
                 "name": "UIColor",
                 "printedName": "UIKit.UIColor",
                 "usr": "c:objc(cs)UIColor"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIColor",
-                "printedName": "UIKit.UIColor",
-                "hasDefaultArg": true,
-                "usr": "c:objc(cs)UIColor"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardTheme(im)initWithInputColor:labelColor:errorColor:borderColor:",
-            "mangledName": "$s5MFSDK11MFCardThemeC10inputColor05labelE005errorE006borderE0ACSo7UIColorC_A3Itcfc",
+            "usr": "c:@M@MFSDK@objc(cs)MFCardTheme(im)initWithInputColor:labelColor:errorColor:",
+            "mangledName": "$s5MFSDK11MFCardThemeC10inputColor05labelE005errorE0ACSo7UIColorC_A2Htcfc",
             "moduleName": "MFSDK",
             "declAttributes": [
               "AccessControl",
@@ -4138,98 +3770,6 @@
           },
           {
             "kind": "Var",
-            "name": "borderColor",
-            "printedName": "borderColor",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UIColor",
-                "printedName": "UIKit.UIColor",
-                "usr": "c:objc(cs)UIColor"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardTheme(py)borderColor",
-            "mangledName": "$s5MFSDK11MFCardThemeC11borderColorSo7UIColorCvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIColor",
-                    "printedName": "UIKit.UIColor",
-                    "usr": "c:objc(cs)UIColor"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardTheme(im)borderColor",
-                "mangledName": "$s5MFSDK11MFCardThemeC11borderColorSo7UIColorCvg",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIColor",
-                    "printedName": "UIKit.UIColor",
-                    "usr": "c:objc(cs)UIColor"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardTheme(im)setBorderColor:",
-                "mangledName": "$s5MFSDK11MFCardThemeC11borderColorSo7UIColorCvs",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK11MFCardThemeC11borderColorSo7UIColorCvM",
-                "mangledName": "$s5MFSDK11MFCardThemeC11borderColorSo7UIColorCvM",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "language",
             "printedName": "language",
             "children": [
@@ -4415,1036 +3955,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MFCardInput",
-        "printedName": "MFCardInput",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "default",
-            "printedName": "default",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MFCardInput",
-                "printedName": "MFSDK.MFCardInput",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardInput"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardInput(cpy)default",
-            "mangledName": "$s5MFSDK11MFCardInputC7defaultACvpZ",
-            "moduleName": "MFSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFCardInput",
-                    "printedName": "MFSDK.MFCardInput",
-                    "usr": "c:@M@MFSDK@objc(cs)MFCardInput"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardInput(cm)default",
-                "mangledName": "$s5MFSDK11MFCardInputC7defaultACvgZ",
-                "moduleName": "MFSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(inputHeight:inputMargin:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MFCardInput",
-                "printedName": "MFSDK.MFCardInput",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardInput"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardInput(im)initWithInputHeight:inputMargin:",
-            "mangledName": "$s5MFSDK11MFCardInputC11inputHeight0D6MarginAC12CoreGraphics7CGFloatV_AHtcfc",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "inputHeight",
-            "printedName": "inputHeight",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardInput(py)inputHeight",
-            "mangledName": "$s5MFSDK11MFCardInputC11inputHeight12CoreGraphics7CGFloatVvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardInput(im)inputHeight",
-                "mangledName": "$s5MFSDK11MFCardInputC11inputHeight12CoreGraphics7CGFloatVvg",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardInput(im)setInputHeight:",
-                "mangledName": "$s5MFSDK11MFCardInputC11inputHeight12CoreGraphics7CGFloatVvs",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK11MFCardInputC11inputHeight14CoreFoundation7CGFloatVvM",
-                "mangledName": "$s5MFSDK11MFCardInputC11inputHeight12CoreGraphics7CGFloatVvM",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "inputMargin",
-            "printedName": "inputMargin",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardInput(py)inputMargin",
-            "mangledName": "$s5MFSDK11MFCardInputC11inputMargin12CoreGraphics7CGFloatVvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardInput(im)inputMargin",
-                "mangledName": "$s5MFSDK11MFCardInputC11inputMargin12CoreGraphics7CGFloatVvg",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardInput(im)setInputMargin:",
-                "mangledName": "$s5MFSDK11MFCardInputC11inputMargin12CoreGraphics7CGFloatVvs",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK11MFCardInputC11inputMargin14CoreFoundation7CGFloatVvM",
-                "mangledName": "$s5MFSDK11MFCardInputC11inputMargin12CoreGraphics7CGFloatVvM",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MFCardInput",
-                "printedName": "MFSDK.MFCardInput",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardInput"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardInput(im)init",
-            "mangledName": "$s5MFSDK11MFCardInputCACycfc",
-            "moduleName": "MFSDK",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@MFSDK@objc(cs)MFCardInput",
-        "mangledName": "$s5MFSDK11MFCardInputC",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC",
-          "ObjCMembers"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "MFBoxShadow",
-        "printedName": "MFBoxShadow",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "default",
-            "printedName": "default",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MFBoxShadow",
-                "printedName": "MFSDK.MFBoxShadow",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(cpy)default",
-            "mangledName": "$s5MFSDK11MFBoxShadowC7defaultACvpZ",
-            "moduleName": "MFSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFBoxShadow",
-                    "printedName": "MFSDK.MFBoxShadow",
-                    "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(cm)default",
-                "mangledName": "$s5MFSDK11MFBoxShadowC7defaultACvgZ",
-                "moduleName": "MFSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(hOffset:vOffset:blur:spread:color:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MFBoxShadow",
-                "printedName": "MFSDK.MFBoxShadow",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIColor",
-                "printedName": "UIKit.UIColor",
-                "usr": "c:objc(cs)UIColor"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)initWithHOffset:vOffset:blur:spread:color:",
-            "mangledName": "$s5MFSDK11MFBoxShadowC7hOffset01vD04blur6spread5colorAC12CoreGraphics7CGFloatV_A3KSo7UIColorCtcfc",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "hOffset",
-            "printedName": "hOffset",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(py)hOffset",
-            "mangledName": "$s5MFSDK11MFBoxShadowC7hOffset12CoreGraphics7CGFloatVvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)hOffset",
-                "mangledName": "$s5MFSDK11MFBoxShadowC7hOffset12CoreGraphics7CGFloatVvg",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)setHOffset:",
-                "mangledName": "$s5MFSDK11MFBoxShadowC7hOffset12CoreGraphics7CGFloatVvs",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK11MFBoxShadowC7hOffset14CoreFoundation7CGFloatVvM",
-                "mangledName": "$s5MFSDK11MFBoxShadowC7hOffset12CoreGraphics7CGFloatVvM",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "vOffset",
-            "printedName": "vOffset",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(py)vOffset",
-            "mangledName": "$s5MFSDK11MFBoxShadowC7vOffset12CoreGraphics7CGFloatVvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)vOffset",
-                "mangledName": "$s5MFSDK11MFBoxShadowC7vOffset12CoreGraphics7CGFloatVvg",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)setVOffset:",
-                "mangledName": "$s5MFSDK11MFBoxShadowC7vOffset12CoreGraphics7CGFloatVvs",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK11MFBoxShadowC7vOffset14CoreFoundation7CGFloatVvM",
-                "mangledName": "$s5MFSDK11MFBoxShadowC7vOffset12CoreGraphics7CGFloatVvM",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "blur",
-            "printedName": "blur",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(py)blur",
-            "mangledName": "$s5MFSDK11MFBoxShadowC4blur12CoreGraphics7CGFloatVvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)blur",
-                "mangledName": "$s5MFSDK11MFBoxShadowC4blur12CoreGraphics7CGFloatVvg",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)setBlur:",
-                "mangledName": "$s5MFSDK11MFBoxShadowC4blur12CoreGraphics7CGFloatVvs",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK11MFBoxShadowC4blur14CoreFoundation7CGFloatVvM",
-                "mangledName": "$s5MFSDK11MFBoxShadowC4blur12CoreGraphics7CGFloatVvM",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "spread",
-            "printedName": "spread",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(py)spread",
-            "mangledName": "$s5MFSDK11MFBoxShadowC6spread12CoreGraphics7CGFloatVvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)spread",
-                "mangledName": "$s5MFSDK11MFBoxShadowC6spread12CoreGraphics7CGFloatVvg",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)setSpread:",
-                "mangledName": "$s5MFSDK11MFBoxShadowC6spread12CoreGraphics7CGFloatVvs",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK11MFBoxShadowC6spread14CoreFoundation7CGFloatVvM",
-                "mangledName": "$s5MFSDK11MFBoxShadowC6spread12CoreGraphics7CGFloatVvM",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "color",
-            "printedName": "color",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UIColor",
-                "printedName": "UIKit.UIColor",
-                "usr": "c:objc(cs)UIColor"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(py)color",
-            "mangledName": "$s5MFSDK11MFBoxShadowC5colorSo7UIColorCvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIColor",
-                    "printedName": "UIKit.UIColor",
-                    "usr": "c:objc(cs)UIColor"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)color",
-                "mangledName": "$s5MFSDK11MFBoxShadowC5colorSo7UIColorCvg",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIColor",
-                    "printedName": "UIKit.UIColor",
-                    "usr": "c:objc(cs)UIColor"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)setColor:",
-                "mangledName": "$s5MFSDK11MFBoxShadowC5colorSo7UIColorCvs",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK11MFBoxShadowC5colorSo7UIColorCvM",
-                "mangledName": "$s5MFSDK11MFBoxShadowC5colorSo7UIColorCvM",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MFBoxShadow",
-                "printedName": "MFSDK.MFBoxShadow",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow(im)init",
-            "mangledName": "$s5MFSDK11MFBoxShadowCACycfc",
-            "moduleName": "MFSDK",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow",
-        "mangledName": "$s5MFSDK11MFBoxShadowC",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC",
-          "ObjCMembers"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "MFCardConfigureBuilder",
         "printedName": "MFCardConfigureBuilder",
         "children": [
@@ -5504,7 +4014,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(placeholder:label:theme:input:)",
+            "printedName": "init(placeholder:label:theme:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5529,18 +4039,11 @@
                 "name": "MFCardTheme",
                 "printedName": "MFSDK.MFCardTheme",
                 "usr": "c:@M@MFSDK@objc(cs)MFCardTheme"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MFCardInput",
-                "printedName": "MFSDK.MFCardInput",
-                "hasDefaultArg": true,
-                "usr": "c:@M@MFSDK@objc(cs)MFCardInput"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardConfigureBuilder(im)initWithPlaceholder:label:theme:input:",
-            "mangledName": "$s5MFSDK22MFCardConfigureBuilderC11placeholder5label5theme5inputAcA0B11PlaceholderC_AA0B5LabelCAA0B5ThemeCAA0B5InputCtcfc",
+            "usr": "c:@M@MFSDK@objc(cs)MFCardConfigureBuilder(im)initWithPlaceholder:label:theme:",
+            "mangledName": "$s5MFSDK22MFCardConfigureBuilderC11placeholder5label5themeAcA0B11PlaceholderC_AA0B5LabelCAA0B5ThemeCtcfc",
             "moduleName": "MFSDK",
             "declAttributes": [
               "AccessControl",
@@ -5631,33 +4134,6 @@
           },
           {
             "kind": "Function",
-            "name": "setCardInput",
-            "printedName": "setCardInput(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MFCardInput",
-                "printedName": "MFSDK.MFCardInput",
-                "usr": "c:@M@MFSDK@objc(cs)MFCardInput"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardConfigureBuilder(im)setCardInput:",
-            "mangledName": "$s5MFSDK22MFCardConfigureBuilderC12setCardInputyyAA0bG0CF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "setBorderWidth",
             "printedName": "setBorderWidth(_:)",
             "children": [
@@ -5730,87 +4206,6 @@
             "declKind": "Func",
             "usr": "c:@M@MFSDK@objc(cs)MFCardConfigureBuilder(im)setFontSize:",
             "mangledName": "$s5MFSDK22MFCardConfigureBuilderC11setFontSizeyy12CoreGraphics7CGFloatVF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setHideCardIcon",
-            "printedName": "setHideCardIcon(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardConfigureBuilder(im)setHideCardIcon:",
-            "mangledName": "$s5MFSDK22MFCardConfigureBuilderC15setHideCardIconyySbF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setBoxShadow",
-            "printedName": "setBoxShadow(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MFBoxShadow",
-                "printedName": "MFSDK.MFBoxShadow",
-                "usr": "c:@M@MFSDK@objc(cs)MFBoxShadow"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardConfigureBuilder(im)setBoxShadow:",
-            "mangledName": "$s5MFSDK22MFCardConfigureBuilderC12setBoxShadowyyAA05MFBoxG0CF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setFontFamily",
-            "printedName": "setFontFamily(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MFFontFamily",
-                "printedName": "MFSDK.MFFontFamily",
-                "usr": "c:@M@MFSDK@E@MFFontFamily"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@MFSDK@objc(cs)MFCardConfigureBuilder(im)setFontFamily:",
-            "mangledName": "$s5MFSDK22MFCardConfigureBuilderC13setFontFamilyyyAA06MFFontG0OF",
             "moduleName": "MFSDK",
             "declAttributes": [
               "AccessControl",
@@ -6820,13 +5215,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "PassKit",
-        "printedName": "PassKit",
-        "declKind": "Import",
-        "moduleName": "MFSDK"
-      },
-      {
         "kind": "TypeDecl",
         "name": "MFConstants",
         "printedName": "MFConstants",
@@ -7197,16 +5585,6 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -8896,6 +7274,99 @@
           },
           {
             "kind": "Var",
+            "name": "errorUrl",
+            "printedName": "errorUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MFSDK@objc(cs)MFSendPaymentRequest(py)errorUrl",
+            "mangledName": "$s5MFSDK20MFSendPaymentRequestC8errorUrlSSvp",
+            "moduleName": "MFSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MFSDK@objc(cs)MFSendPaymentRequest(im)errorUrl",
+                "mangledName": "$s5MFSDK20MFSendPaymentRequestC8errorUrlSSvg",
+                "moduleName": "MFSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MFSDK@objc(cs)MFSendPaymentRequest(im)setErrorUrl:",
+                "mangledName": "$s5MFSDK20MFSendPaymentRequestC8errorUrlSSvs",
+                "moduleName": "MFSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5MFSDK20MFSendPaymentRequestC8errorUrlSSvM",
+                "mangledName": "$s5MFSDK20MFSendPaymentRequestC8errorUrlSSvM",
+                "moduleName": "MFSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "customerAddress",
             "printedName": "customerAddress",
             "children": [
@@ -8922,7 +7393,6 @@
               "HasInitialValue",
               "HasStorage",
               "AccessControl",
-              "RawDocComment",
               "ObjC"
             ],
             "hasStorage": true,
@@ -9014,6 +7484,99 @@
           },
           {
             "kind": "Var",
+            "name": "callBackUrl",
+            "printedName": "callBackUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@MFSDK@objc(cs)MFSendPaymentRequest(py)callBackUrl",
+            "mangledName": "$s5MFSDK20MFSendPaymentRequestC11callBackUrlSSvp",
+            "moduleName": "MFSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MFSDK@objc(cs)MFSendPaymentRequest(im)callBackUrl",
+                "mangledName": "$s5MFSDK20MFSendPaymentRequestC11callBackUrlSSvg",
+                "moduleName": "MFSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@MFSDK@objc(cs)MFSendPaymentRequest(im)setCallBackUrl:",
+                "mangledName": "$s5MFSDK20MFSendPaymentRequestC11callBackUrlSSvs",
+                "moduleName": "MFSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5MFSDK20MFSendPaymentRequestC11callBackUrlSSvM",
+                "mangledName": "$s5MFSDK20MFSendPaymentRequestC11callBackUrlSSvM",
+                "moduleName": "MFSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "userDefinedField",
             "printedName": "userDefinedField",
             "children": [
@@ -9032,7 +7595,6 @@
               "HasInitialValue",
               "HasStorage",
               "AccessControl",
-              "RawDocComment",
               "ObjC"
             ],
             "hasStorage": true,
@@ -9421,514 +7983,6 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "MFFontWeight",
-        "printedName": "MFFontWeight",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "thin",
-            "printedName": "thin",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontWeight.Type) -> MFSDK.MFFontWeight",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontWeight.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontWeight",
-                        "printedName": "MFSDK.MFFontWeight",
-                        "usr": "c:@M@MFSDK@E@MFFontWeight"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontWeight@MFFontWeightThin",
-            "mangledName": "$s5MFSDK12MFFontWeightO4thinyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 0
-          },
-          {
-            "kind": "Var",
-            "name": "extraLight",
-            "printedName": "extraLight",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontWeight.Type) -> MFSDK.MFFontWeight",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontWeight.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontWeight",
-                        "printedName": "MFSDK.MFFontWeight",
-                        "usr": "c:@M@MFSDK@E@MFFontWeight"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontWeight@MFFontWeightExtraLight",
-            "mangledName": "$s5MFSDK12MFFontWeightO10extraLightyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 1
-          },
-          {
-            "kind": "Var",
-            "name": "light",
-            "printedName": "light",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontWeight.Type) -> MFSDK.MFFontWeight",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontWeight.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontWeight",
-                        "printedName": "MFSDK.MFFontWeight",
-                        "usr": "c:@M@MFSDK@E@MFFontWeight"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontWeight@MFFontWeightLight",
-            "mangledName": "$s5MFSDK12MFFontWeightO5lightyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 2
-          },
-          {
-            "kind": "Var",
-            "name": "normal",
-            "printedName": "normal",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontWeight.Type) -> MFSDK.MFFontWeight",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontWeight.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontWeight",
-                        "printedName": "MFSDK.MFFontWeight",
-                        "usr": "c:@M@MFSDK@E@MFFontWeight"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontWeight@MFFontWeightNormal",
-            "mangledName": "$s5MFSDK12MFFontWeightO6normalyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 3
-          },
-          {
-            "kind": "Var",
-            "name": "medium",
-            "printedName": "medium",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontWeight.Type) -> MFSDK.MFFontWeight",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontWeight.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontWeight",
-                        "printedName": "MFSDK.MFFontWeight",
-                        "usr": "c:@M@MFSDK@E@MFFontWeight"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontWeight@MFFontWeightMedium",
-            "mangledName": "$s5MFSDK12MFFontWeightO6mediumyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 4
-          },
-          {
-            "kind": "Var",
-            "name": "semiBold",
-            "printedName": "semiBold",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontWeight.Type) -> MFSDK.MFFontWeight",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontWeight.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontWeight",
-                        "printedName": "MFSDK.MFFontWeight",
-                        "usr": "c:@M@MFSDK@E@MFFontWeight"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontWeight@MFFontWeightSemiBold",
-            "mangledName": "$s5MFSDK12MFFontWeightO8semiBoldyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 5
-          },
-          {
-            "kind": "Var",
-            "name": "bold",
-            "printedName": "bold",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontWeight.Type) -> MFSDK.MFFontWeight",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontWeight.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontWeight",
-                        "printedName": "MFSDK.MFFontWeight",
-                        "usr": "c:@M@MFSDK@E@MFFontWeight"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontWeight@MFFontWeightBold",
-            "mangledName": "$s5MFSDK12MFFontWeightO4boldyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 6
-          },
-          {
-            "kind": "Var",
-            "name": "extraBold",
-            "printedName": "extraBold",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontWeight.Type) -> MFSDK.MFFontWeight",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontWeight.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontWeight",
-                        "printedName": "MFSDK.MFFontWeight",
-                        "usr": "c:@M@MFSDK@E@MFFontWeight"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontWeight@MFFontWeightExtraBold",
-            "mangledName": "$s5MFSDK12MFFontWeightO9extraBoldyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 7
-          },
-          {
-            "kind": "Var",
-            "name": "heavy",
-            "printedName": "heavy",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontWeight.Type) -> MFSDK.MFFontWeight",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontWeight.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontWeight",
-                        "printedName": "MFSDK.MFFontWeight",
-                        "usr": "c:@M@MFSDK@E@MFFontWeight"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontWeight@MFFontWeightHeavy",
-            "mangledName": "$s5MFSDK12MFFontWeightO5heavyyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 8
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:5MFSDK12MFFontWeightO8rawValueSSvp",
-            "mangledName": "$s5MFSDK12MFFontWeightO8rawValueSSvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK12MFFontWeightO8rawValueSSvg",
-                "mangledName": "$s5MFSDK12MFFontWeightO8rawValueSSvg",
-                "moduleName": "MFSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MFSDK.MFFontWeight?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontWeight",
-                    "printedName": "MFSDK.MFFontWeight",
-                    "usr": "c:@M@MFSDK@E@MFFontWeight"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:5MFSDK12MFFontWeightO8rawValueACSgSS_tcfc",
-            "mangledName": "$s5MFSDK12MFFontWeightO8rawValueACSgSS_tcfc",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "c:@M@MFSDK@E@MFFontWeight",
-        "mangledName": "$s5MFSDK12MFFontWeightO",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "enumRawTypeName": "Int",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
           }
         ]
       },
@@ -12086,102 +10140,9 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "showNavigationBar",
-            "printedName": "showNavigationBar",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@MFSDK@objc(cs)MFTheme(py)showNavigationBar",
-            "mangledName": "$s5MFSDK7MFThemeC17showNavigationBarSbvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFTheme(im)showNavigationBar",
-                "mangledName": "$s5MFSDK7MFThemeC17showNavigationBarSbvg",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@MFSDK@objc(cs)MFTheme(im)setShowNavigationBar:",
-                "mangledName": "$s5MFSDK7MFThemeC17showNavigationBarSbvs",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK7MFThemeC17showNavigationBarSbvM",
-                "mangledName": "$s5MFSDK7MFThemeC17showNavigationBarSbvM",
-                "moduleName": "MFSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(navigationTintColor:navigationBarTintColor:navigationTitle:cancelButtonTitle:showNavigationBar:)",
+            "printedName": "init(navigationTintColor:navigationBarTintColor:navigationTitle:cancelButtonTitle:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12212,18 +10173,11 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@MFSDK@objc(cs)MFTheme(im)initWithNavigationTintColor:navigationBarTintColor:navigationTitle:cancelButtonTitle:showNavigationBar:",
-            "mangledName": "$s5MFSDK7MFThemeC19navigationTintColor0c3BardE00C5Title012cancelButtonG0014showNavigationF0ACSo7UIColorC_AJS2SSbtcfc",
+            "usr": "c:@M@MFSDK@objc(cs)MFTheme(im)initWithNavigationTintColor:navigationBarTintColor:navigationTitle:cancelButtonTitle:",
+            "mangledName": "$s5MFSDK7MFThemeC19navigationTintColor0c3BardE00C5Title012cancelButtonG0ACSo7UIColorC_AIS2Stcfc",
             "moduleName": "MFSDK",
             "declAttributes": [
               "AccessControl",
@@ -13827,16 +11781,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "MFFailResponse",
         "printedName": "MFFailResponse",
@@ -14288,596 +12232,6 @@
         "declKind": "Enum",
         "usr": "c:@M@MFSDK@E@MFAPILanguage",
         "mangledName": "$s5MFSDK13MFAPILanguageO",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "enumRawTypeName": "Int",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "MFFontFamily",
-        "printedName": "MFFontFamily",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "sansSerif",
-            "printedName": "sansSerif",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilySansSerif",
-            "mangledName": "$s5MFSDK12MFFontFamilyO9sansSerifyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 0
-          },
-          {
-            "kind": "Var",
-            "name": "arial",
-            "printedName": "arial",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilyArial",
-            "mangledName": "$s5MFSDK12MFFontFamilyO5arialyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 1
-          },
-          {
-            "kind": "Var",
-            "name": "timesNewRoman",
-            "printedName": "timesNewRoman",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilyTimesNewRoman",
-            "mangledName": "$s5MFSDK12MFFontFamilyO13timesNewRomanyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 2
-          },
-          {
-            "kind": "Var",
-            "name": "helvetica",
-            "printedName": "helvetica",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilyHelvetica",
-            "mangledName": "$s5MFSDK12MFFontFamilyO9helveticayA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 3
-          },
-          {
-            "kind": "Var",
-            "name": "tahoma",
-            "printedName": "tahoma",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilyTahoma",
-            "mangledName": "$s5MFSDK12MFFontFamilyO6tahomayA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 4
-          },
-          {
-            "kind": "Var",
-            "name": "verdana",
-            "printedName": "verdana",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilyVerdana",
-            "mangledName": "$s5MFSDK12MFFontFamilyO7verdanayA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 5
-          },
-          {
-            "kind": "Var",
-            "name": "monaco",
-            "printedName": "monaco",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilyMonaco",
-            "mangledName": "$s5MFSDK12MFFontFamilyO6monacoyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 6
-          },
-          {
-            "kind": "Var",
-            "name": "georgia",
-            "printedName": "georgia",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilyGeorgia",
-            "mangledName": "$s5MFSDK12MFFontFamilyO7georgiayA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 7
-          },
-          {
-            "kind": "Var",
-            "name": "courierNew",
-            "printedName": "courierNew",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilyCourierNew",
-            "mangledName": "$s5MFSDK12MFFontFamilyO10courierNewyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 8
-          },
-          {
-            "kind": "Var",
-            "name": "garamond",
-            "printedName": "garamond",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilyGaramond",
-            "mangledName": "$s5MFSDK12MFFontFamilyO8garamondyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 9
-          },
-          {
-            "kind": "Var",
-            "name": "trebuchetMS",
-            "printedName": "trebuchetMS",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(MFSDK.MFFontFamily.Type) -> MFSDK.MFFontFamily",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "MFSDK.MFFontFamily.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFontFamily",
-                        "printedName": "MFSDK.MFFontFamily",
-                        "usr": "c:@M@MFSDK@E@MFFontFamily"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@MFSDK@E@MFFontFamily@MFFontFamilyTrebuchetMS",
-            "mangledName": "$s5MFSDK12MFFontFamilyO11trebuchetMSyA2CmF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 10
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:5MFSDK12MFFontFamilyO8rawValueSSvp",
-            "mangledName": "$s5MFSDK12MFFontFamilyO8rawValueSSvp",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5MFSDK12MFFontFamilyO8rawValueSSvg",
-                "mangledName": "$s5MFSDK12MFFontFamilyO8rawValueSSvg",
-                "moduleName": "MFSDK",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "MFSDK.MFFontFamily?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MFFontFamily",
-                    "printedName": "MFSDK.MFFontFamily",
-                    "usr": "c:@M@MFSDK@E@MFFontFamily"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:5MFSDK12MFFontFamilyO8rawValueACSgSS_tcfc",
-            "mangledName": "$s5MFSDK12MFFontFamilyO8rawValueACSgSS_tcfc",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "c:@M@MFSDK@E@MFFontFamily",
-        "mangledName": "$s5MFSDK12MFFontFamilyO",
         "moduleName": "MFSDK",
         "declAttributes": [
           "AccessControl",
@@ -17430,10 +14784,8 @@
             "usr": "c:@M@MFSDK@objc(cs)MFExecutePaymentRequest(im)initWithInvoiceValue:paymentMethod:callBackUrl:errorUrl:",
             "mangledName": "$s5MFSDK23MFExecutePaymentRequestC12invoiceValue13paymentMethod11callBackUrl05errorK0ACSo9NSDecimala_SiS2Stcfc",
             "moduleName": "MFSDK",
-            "deprecated": true,
             "declAttributes": [
               "AccessControl",
-              "Available",
               "ObjC"
             ],
             "init_kind": "Designated"
@@ -17923,16 +15275,6 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -19977,153 +17319,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MFUpdateSessionRequest",
-        "printedName": "MFUpdateSessionRequest",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(sessionId:tokenType:token:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MFUpdateSessionRequest",
-                "printedName": "MFSDK.MFUpdateSessionRequest",
-                "usr": "c:@M@MFSDK@objc(cs)MFUpdateSessionRequest"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@MFSDK@objc(cs)MFUpdateSessionRequest(im)initWithSessionId:tokenType:token:",
-            "mangledName": "$s5MFSDK22MFUpdateSessionRequestC9sessionId9tokenType0G0ACSS_S2Stcfc",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MFUpdateSessionRequest",
-                "printedName": "MFSDK.MFUpdateSessionRequest",
-                "usr": "c:@M@MFSDK@objc(cs)MFUpdateSessionRequest"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@MFSDK@objc(cs)MFUpdateSessionRequest(im)init",
-            "mangledName": "$s5MFSDK22MFUpdateSessionRequestCACycfc",
-            "moduleName": "MFSDK",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@MFSDK@objc(cs)MFUpdateSessionRequest",
-        "mangledName": "$s5MFSDK22MFUpdateSessionRequestC",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC",
-          "ObjCMembers"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "MFDirectPaymentResponse",
         "printedName": "MFDirectPaymentResponse",
         "children": [
@@ -22023,59 +19218,6 @@
           },
           {
             "kind": "Function",
-            "name": "validate",
-            "printedName": "validate(validateSessionCompletion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Result<Swift.String, MFSDK.MFFailResponse>) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Swift.Result<Swift.String, MFSDK.MFFailResponse>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MFFailResponse",
-                        "printedName": "MFSDK.MFFailResponse",
-                        "usr": "c:@M@MFSDK@objc(cs)MFFailResponse"
-                      }
-                    ],
-                    "usr": "s:s6ResultO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:5MFSDK17MFPaymentCardViewC8validate0E17SessionCompletionyys6ResultOySSAA14MFFailResponseCGc_tF",
-            "mangledName": "$s5MFSDK17MFPaymentCardViewC8validate0E17SessionCompletionyys6ResultOySSAA14MFFailResponseCGc_tF",
-            "moduleName": "MFSDK",
-            "declAttributes": [
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "userContentController",
             "printedName": "userContentController(_:didReceive:)",
             "children": [
@@ -22205,23 +19347,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "MFSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "PassKit",
-        "printedName": "PassKit",
-        "declKind": "Import",
-        "moduleName": "MFSDK"
       },
       {
         "kind": "Import",
@@ -32708,13 +29833,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "PassKit",
-        "printedName": "PassKit",
-        "declKind": "Import",
-        "moduleName": "MFSDK"
-      },
-      {
         "kind": "TypeDecl",
         "name": "MFSettings",
         "printedName": "MFSettings",
@@ -32945,6 +30063,7 @@
             "moduleName": "MFSDK",
             "declAttributes": [
               "AccessControl",
+              "RawDocComment",
               "ObjC"
             ],
             "funcSelfKind": "NonMutating"
@@ -33811,20 +30930,6 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFPaymentProvider.swift",
-      "kind": "IntegerLiteral",
-      "offset": 292,
-      "length": 8,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFPaymentProvider.swift",
-      "kind": "IntegerLiteral",
-      "offset": 310,
-      "length": 6,
-      "value": "2"
-    },
-    {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFKeyType.swift",
       "kind": "IntegerLiteral",
       "offset": 282,
@@ -34113,127 +31218,36 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "FloatLiteral",
-      "offset": 2144,
-      "length": 12,
-      "value": "0.7803230882"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "FloatLiteral",
-      "offset": 2165,
-      "length": 11,
-      "value": "0.780436337"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "FloatLiteral",
-      "offset": 2184,
-      "length": 12,
-      "value": "0.7802982926"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2205,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
       "kind": "StringLiteral",
-      "offset": 1896,
+      "offset": 1783,
       "length": 11,
       "value": "\"MFSDK.MFCardTheme\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
       "kind": "IntegerLiteral",
-      "offset": 3490,
-      "length": 2,
-      "value": "32"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3507,
-      "length": 2,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "StringLiteral",
-      "offset": 3407,
-      "length": 11,
-      "value": "\"MFSDK.MFCardInput\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3842,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3854,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3863,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3874,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "StringLiteral",
-      "offset": 3763,
-      "length": 11,
-      "value": "\"MFSDK.MFBoxShadow\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4749,
+      "offset": 3269,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
       "kind": "IntegerLiteral",
-      "offset": 4784,
+      "offset": 3304,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
       "kind": "IntegerLiteral",
-      "offset": 4815,
+      "offset": 3335,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4843,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFCardConfigureBuilder.swift",
       "kind": "StringLiteral",
-      "offset": 4391,
+      "offset": 2954,
       "length": 22,
       "value": "\"MFSDK.MFCardConfigureBuilder\""
     },
@@ -34317,126 +31331,119 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 211,
+      "offset": 196,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 250,
+      "offset": 235,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 287,
+      "offset": 272,
       "length": 8,
       "value": "\"Accept\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 322,
+      "offset": 307,
       "length": 17,
       "value": "\"Accept-Encoding\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 366,
+      "offset": 351,
       "length": 17,
       "value": "\"Accept-Language\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 211,
+      "offset": 196,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 250,
+      "offset": 235,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 287,
+      "offset": 272,
       "length": 8,
       "value": "\"Accept\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 322,
+      "offset": 307,
       "length": 17,
       "value": "\"Accept-Encoding\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 366,
+      "offset": 351,
       "length": 17,
       "value": "\"Accept-Language\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 430,
+      "offset": 415,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 430,
+      "offset": 415,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 512,
+      "offset": 497,
       "length": 25,
       "value": "\"https:\/\/myfatoorah.com\/\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 572,
+      "offset": 557,
       "length": 30,
       "value": "\"https:\/\/myfatooraherror.com\/\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1374,
+      "offset": 1359,
       "length": 56,
       "value": "\"https:\/\/portal.myfatoorah.com\/Files\/API\/mf-config.json\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
-      "kind": "Dictionary",
-      "offset": 1470,
-      "length": 104,
-      "value": "[(\"KWT\", \"KW\"), (\"SAU\", \"SA\"), (\"BHR\", \"BH\"), (\"ARE\", \"AE\"), (\"QAT\", \"QA\"), (\"OMN\", \"OM\"), (\"JOR\", \"JO\"), (\"EGY\", \"EG\")]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1936,
+      "offset": 1503,
       "length": 13,
       "value": "\"MFPaymentId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2005,
+      "offset": 1572,
       "length": 17,
       "value": "\"MFApplePayCheck\""
     },
@@ -34513,21 +31520,35 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFSendPayment\/MFSendPaymentRequest.swift",
       "kind": "StringLiteral",
-      "offset": 952,
+      "offset": 812,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFSendPayment\/MFSendPaymentRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 903,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFSendPayment\/MFSendPaymentRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 948,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFSendPayment\/MFSendPaymentRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 990,
+      "offset": 986,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFSendPayment\/MFSendPaymentRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 1032,
+      "offset": 1028,
       "length": 1,
       "value": "0"
     },
@@ -34537,62 +31558,6 @@
       "offset": 200,
       "length": 20,
       "value": "\"MFSDK.MFSendPaymentRequest\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontWeigt.swift",
-      "kind": "IntegerLiteral",
-      "offset": 285,
-      "length": 10,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontWeigt.swift",
-      "kind": "IntegerLiteral",
-      "offset": 305,
-      "length": 5,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontWeigt.swift",
-      "kind": "IntegerLiteral",
-      "offset": 320,
-      "length": 6,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontWeigt.swift",
-      "kind": "IntegerLiteral",
-      "offset": 336,
-      "length": 6,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontWeigt.swift",
-      "kind": "IntegerLiteral",
-      "offset": 352,
-      "length": 8,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontWeigt.swift",
-      "kind": "IntegerLiteral",
-      "offset": 370,
-      "length": 4,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontWeigt.swift",
-      "kind": "IntegerLiteral",
-      "offset": 384,
-      "length": 9,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontWeigt.swift",
-      "kind": "IntegerLiteral",
-      "offset": 403,
-      "length": 5,
-      "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/Method.swift",
@@ -34677,20 +31642,6 @@
       "offset": 471,
       "length": 6,
       "value": "11"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/MFSettings\/MFTheme.swift",
-      "kind": "BooleanLiteral",
-      "offset": 419,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/MFSettings\/MFTheme.swift",
-      "kind": "BooleanLiteral",
-      "offset": 581,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/MFSettings\/MFTheme.swift",
@@ -34945,34 +31896,6 @@
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFInitiatePayment\/MFUpdateSessionResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 343,
-      "length": 11,
-      "value": "\"SessionId\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFInitiatePayment\/MFUpdateSessionResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 382,
-      "length": 13,
-      "value": "\"CountryCode\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFInitiatePayment\/MFUpdateSessionResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 343,
-      "length": 11,
-      "value": "\"SessionId\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFInitiatePayment\/MFUpdateSessionResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 382,
-      "length": 13,
-      "value": "\"CountryCode\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFFailResponse.swift",
       "kind": "StringLiteral",
       "offset": 193,
@@ -35006,76 +31929,6 @@
       "offset": 282,
       "length": 7,
       "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontFamily.swift",
-      "kind": "IntegerLiteral",
-      "offset": 291,
-      "length": 5,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontFamily.swift",
-      "kind": "IntegerLiteral",
-      "offset": 306,
-      "length": 13,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontFamily.swift",
-      "kind": "IntegerLiteral",
-      "offset": 329,
-      "length": 9,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontFamily.swift",
-      "kind": "IntegerLiteral",
-      "offset": 348,
-      "length": 6,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontFamily.swift",
-      "kind": "IntegerLiteral",
-      "offset": 364,
-      "length": 7,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontFamily.swift",
-      "kind": "IntegerLiteral",
-      "offset": 381,
-      "length": 6,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontFamily.swift",
-      "kind": "IntegerLiteral",
-      "offset": 397,
-      "length": 7,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontFamily.swift",
-      "kind": "IntegerLiteral",
-      "offset": 414,
-      "length": 10,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontFamily.swift",
-      "kind": "IntegerLiteral",
-      "offset": 434,
-      "length": 8,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFFontFamily.swift",
-      "kind": "IntegerLiteral",
-      "offset": 452,
-      "length": 11,
-      "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/General\/MFSupplier.swift",
@@ -35178,84 +32031,98 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "StringLiteral",
-      "offset": 365,
+      "offset": 370,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "StringLiteral",
-      "offset": 409,
+      "offset": 413,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "StringLiteral",
-      "offset": 455,
+      "offset": 454,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "StringLiteral",
-      "offset": 497,
+      "offset": 498,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "StringLiteral",
-      "offset": 540,
+      "offset": 544,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
-      "kind": "Array",
+      "kind": "StringLiteral",
       "offset": 586,
       "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 629,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
+      "kind": "Array",
+      "offset": 675,
+      "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "StringLiteral",
-      "offset": 762,
+      "offset": 851,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "StringLiteral",
-      "offset": 865,
+      "offset": 954,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 1013,
+      "offset": 1102,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 1165,
+      "offset": 1254,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "Array",
-      "offset": 1208,
+      "offset": 1297,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFExecutePayment\/MFExecutePaymentRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1246,
+      "offset": 1335,
       "length": 2,
       "value": "\"\""
     },
@@ -35307,13 +32174,6 @@
       "offset": 464,
       "length": 11,
       "value": "\"UnitPrice\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/General\/MFSubmitCardViewResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 199,
-      "length": 24,
-      "value": "\"MFSDK.MFSubmitCardViewResponse\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFInitiatePayment\/PaymentMethod.swift",
@@ -35503,13 +32363,6 @@
       "offset": 190,
       "length": 16,
       "value": "\"MFSDK.MFRecurringModel\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFInitiateSession\/MFUpdateSessionRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 201,
-      "length": 22,
-      "value": "\"MFSDK.MFUpdateSessionRequest\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Models\/MFDirectPayment\/MFDirectPaymentResponse.swift",
@@ -35794,135 +32647,86 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "StringLiteral",
-      "offset": 1486,
+      "offset": 1232,
       "length": 14,
       "value": "\"Name On Card\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "StringLiteral",
-      "offset": 1680,
+      "offset": 1426,
       "length": 8,
       "value": "\"Number\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "StringLiteral",
-      "offset": 1859,
+      "offset": 1605,
       "length": 9,
       "value": "\"MM \/ YY\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "StringLiteral",
-      "offset": 2032,
+      "offset": 1778,
       "length": 5,
       "value": "\"CVV\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "StringLiteral",
-      "offset": 2192,
+      "offset": 1938,
       "length": 18,
       "value": "\"Card Holder Name\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "StringLiteral",
-      "offset": 2365,
+      "offset": 2111,
       "length": 13,
       "value": "\"Card Number\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "StringLiteral",
-      "offset": 2525,
+      "offset": 2271,
       "length": 13,
       "value": "\"Expiry Date\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "StringLiteral",
-      "offset": 2678,
+      "offset": 2424,
       "length": 15,
       "value": "\"Security Code\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2819,
+      "offset": 2565,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3513,
+      "offset": 3118,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3645,
+      "offset": 3250,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3776,
+      "offset": 3381,
       "length": 2,
       "value": "13"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3895,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4039,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4187,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4332,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4473,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4760,
-      "length": 2,
-      "value": "32"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Payment Card View\/MFPaymentCardView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4903,
-      "length": 2,
-      "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/Enums\/MFCurrencyISO.swift",
@@ -37425,14 +34229,14 @@
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/MFSettings\/MFSettings.swift",
       "kind": "StringLiteral",
-      "offset": 308,
+      "offset": 292,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/1\/s\/MF-SDK-iOS\/MFSDK\/MFSettings\/MFSettings.swift",
       "kind": "StringLiteral",
-      "offset": 337,
+      "offset": 321,
       "length": 2,
       "value": "\"\""
     }
