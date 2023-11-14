@@ -4,12 +4,24 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 @_exported import MFSDK
+import PassKit
 import SafariServices
 import Swift
 import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+@objc public enum MFPaymentProvider : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case cardView
+  case applePay
+  case google
+  case mfToken
+  public var rawValue: MFSDK.MFPaymentProvider.RawValue {
+    get
+  }
+  public init?(rawValue: MFSDK.MFPaymentProvider.RawValue)
+}
 @objc public enum MFKeyType : Swift.Int, Swift.RawRepresentable {
   public typealias RawValue = Swift.String
   case invoiceId
@@ -88,32 +100,74 @@ extension MFSDK.MFPaymentRequest {
 }
 @objcMembers @objc public class MFCardLabel : ObjectiveC.NSObject {
   @objc public static let `default`: MFSDK.MFCardLabel
-  @objc public init(cardHolderNameLabel: Swift.String, cardNumberLabel: Swift.String, expiryDateLabel: Swift.String, cvvLabel: Swift.String, showLabels: Swift.Bool)
+  @objc public init(cardHolderNameLabel: Swift.String, cardNumberLabel: Swift.String, expiryDateLabel: Swift.String, cvvLabel: Swift.String, showLabels: Swift.Bool, fontWeight: MFSDK.MFFontWeight = .normal)
   @objc public var cardHolderNameLabel: Swift.String
   @objc public var cardNumberLabel: Swift.String
   @objc public var expiryDateLabel: Swift.String
   @objc public var cvvLabel: Swift.String
   @objc public var showLabels: Swift.Bool
+  @objc public var fontWeight: MFSDK.MFFontWeight
   @objc deinit
 }
 @objcMembers @objc public class MFCardTheme : ObjectiveC.NSObject {
   @objc public static let `default`: MFSDK.MFCardTheme
-  @objc public init(inputColor: UIKit.UIColor, labelColor: UIKit.UIColor, errorColor: UIKit.UIColor)
+  @objc public init(inputColor: UIKit.UIColor, labelColor: UIKit.UIColor, errorColor: UIKit.UIColor, borderColor: UIKit.UIColor = #colorLiteral(red: 0.7803230882, green: 0.780436337, blue: 0.7802982926, alpha: 1))
   @objc public var inputColor: UIKit.UIColor
   @objc public var labelColor: UIKit.UIColor
   @objc public var errorColor: UIKit.UIColor
+  @objc public var borderColor: UIKit.UIColor
   @objc public var language: MFSDK.MFLanguage
+  @objc deinit
+}
+@objcMembers @objc public class MFCardInput : ObjectiveC.NSObject {
+  @objc public static let `default`: MFSDK.MFCardInput
+  @objc public init(inputHeight: CoreFoundation.CGFloat, inputMargin: CoreFoundation.CGFloat)
+  @objc public var inputHeight: CoreFoundation.CGFloat
+  @objc public var inputMargin: CoreFoundation.CGFloat
+  @objc deinit
+}
+@objcMembers @objc public class MFBoxShadow : ObjectiveC.NSObject {
+  @objc public static let `default`: MFSDK.MFBoxShadow
+  @objc public init(hOffset: CoreFoundation.CGFloat, vOffset: CoreFoundation.CGFloat, blur: CoreFoundation.CGFloat, spread: CoreFoundation.CGFloat, color: UIKit.UIColor)
+  @objc public var hOffset: CoreFoundation.CGFloat
+  @objc public var vOffset: CoreFoundation.CGFloat
+  @objc public var blur: CoreFoundation.CGFloat
+  @objc public var spread: CoreFoundation.CGFloat
+  @objc public var color: UIKit.UIColor
+  @objc deinit
+}
+@objcMembers @objc public class MFSavedCardText : ObjectiveC.NSObject {
+  @objc public static let `default`: MFSDK.MFSavedCardText
+  @objc public init(saveCardText: Swift.String, addCardText: Swift.String, deleteAlertText: MFSDK.MFDeleteAlert)
+  @objc public var saveCardText: Swift.String
+  @objc public var addCardText: Swift.String
+  @objc public var deleteAlertText: MFSDK.MFDeleteAlert
+  @objc deinit
+}
+@objcMembers @objc public class MFDeleteAlert : ObjectiveC.NSObject {
+  @objc public static let `default`: MFSDK.MFDeleteAlert
+  @objc public init(title: Swift.String, message: Swift.String, confirm: Swift.String, cancel: Swift.String)
+  @objc public var title: Swift.String
+  @objc public var message: Swift.String
+  @objc public var confirm: Swift.String
+  @objc public var cancel: Swift.String
   @objc deinit
 }
 @objcMembers @objc public class MFCardConfigureBuilder : ObjectiveC.NSObject {
   @objc public static let `default`: MFSDK.MFCardConfigureBuilder
-  @objc public init(placeholder: MFSDK.MFCardPlaceholder, label: MFSDK.MFCardLabel, theme: MFSDK.MFCardTheme)
+  @objc public init(placeholder: MFSDK.MFCardPlaceholder, label: MFSDK.MFCardLabel, theme: MFSDK.MFCardTheme, input: MFSDK.MFCardInput = .default)
   @objc public func setPlaceholder(_ placeholder: MFSDK.MFCardPlaceholder)
   @objc public func setLabel(_ label: MFSDK.MFCardLabel)
   @objc public func setTheme(_ theme: MFSDK.MFCardTheme)
+  @objc public func setCardInput(_ cardInput: MFSDK.MFCardInput)
   @objc public func setBorderWidth(_ borderWidth: CoreFoundation.CGFloat)
   @objc public func setBorderRadius(_ borderRadius: CoreFoundation.CGFloat)
   @objc public func setFontSize(_ fontSize: CoreFoundation.CGFloat)
+  @objc public func setHideCardIcon(_ hideCardIcon: Swift.Bool)
+  @objc public func setBoxShadow(_ boxShadow: MFSDK.MFBoxShadow)
+  @objc public func setFontFamily(_ fontFamily: MFSDK.MFFontFamily)
+  @objc public func setSaveCardText(_ saveCardText: MFSDK.MFSavedCardText)
+  @objc public func setTokenHeight(_ tokenHeight: CoreFoundation.CGFloat)
   @objc public func build() -> MFSDK.MFCardConfigureBuilder
   @objc deinit
 }
@@ -135,6 +189,7 @@ extension MFSDK.MFPaymentRequest {
 @_inheritsConvenienceInitializers @objcMembers @objc public class MFInitiateSessionResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public var sessionId: Swift.String?
   @objc public var countryCode: Swift.String?
+  @objc public var customerTokens: [MFSDK.MFCustomerToken]?
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
@@ -167,6 +222,10 @@ extension MFSDK.MFPaymentRequest {
   @objc override dynamic public init()
   @objc deinit
 }
+public enum MFJSFunction {
+  case submit, initPayment
+  case update(amount: Swift.Double)
+}
 @objcMembers @objc public class MFSendPaymentRequest : ObjectiveC.NSObject {
   @objc public var mobileCountryIsoCode: Swift.String
   @objc public var displayCurrencyIso: MFSDK.MFCurrencyISO
@@ -177,18 +236,37 @@ extension MFSDK.MFPaymentRequest {
   @objc public var invoiceItems: [MFSDK.MFProduct]
   @objc public var language: MFSDK.MFLanguage
   @objc public var expiryDate: Foundation.Date?
-  @objc public var errorUrl: Swift.String
   @objc public var customerAddress: MFSDK.MFCustomerAddress?
-  @objc public var callBackUrl: Swift.String
   @objc public var userDefinedField: Swift.String
   @objc public var supplierCode: Swift.Int
   @objc public var supplierValue: Foundation.Decimal
   @objc public init(invoiceValue: Foundation.Decimal, notificationOption: MFSDK.MFNotificationOption, customerName: Swift.String)
   @objc deinit
 }
+@objc public enum MFFontWeight : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case thin
+  case extraLight
+  case light
+  case normal
+  case medium
+  case semiBold
+  case bold
+  case extraBold
+  case heavy
+  public var rawValue: MFSDK.MFFontWeight.RawValue {
+    get
+  }
+  public init?(rawValue: MFSDK.MFFontWeight.RawValue)
+}
 @_inheritsConvenienceInitializers @objcMembers @objc public class MFPaymentRequest : ObjectiveC.NSObject {
   @objc public static let shared: MFSDK.MFPaymentRequest
   @objc override dynamic public init()
+  @objc deinit
+}
+@objc @objcMembers public class MFProcessingDetails : ObjectiveC.NSObject {
+  @objc public var autoCapture: Swift.Bool
+  @objc public init(autoCapture: Swift.Bool = false)
   @objc deinit
 }
 @objc public enum MFPaymentMethodCode : Swift.Int, Swift.RawRepresentable {
@@ -215,8 +293,12 @@ extension MFSDK.MFPaymentRequest {
   @objc public var navigationBarTintColor: UIKit.UIColor
   @objc public var navigationTitle: Swift.String
   @objc public var cancelButtonTitle: Swift.String
-  @objc public init(navigationTintColor: UIKit.UIColor, navigationBarTintColor: UIKit.UIColor, navigationTitle: Swift.String, cancelButtonTitle: Swift.String)
+  @objc public var showNavigationBar: Swift.Bool
+  @objc public init(navigationTintColor: UIKit.UIColor, navigationBarTintColor: UIKit.UIColor, navigationTitle: Swift.String, cancelButtonTitle: Swift.String, showNavigationBar: Swift.Bool = true)
   @objc deinit
+}
+@objc public protocol MFCardViewDelegate {
+  @objc func didHeightChanged(height: CoreFoundation.CGFloat)
 }
 @objcMembers @objc public class MFInvoiceTransaction : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let transactionDate: Swift.String?, paymentGateway: Swift.String?, referenceID: Swift.String?, trackID: Swift.String?
@@ -237,6 +319,12 @@ extension MFSDK.MFPaymentRequest {
   }
   public init?(rawValue: MFSDK.MFPaymentype.RawValue)
 }
+@_inheritsConvenienceInitializers @objcMembers @objc public class MFUpdateSessionResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers @objcMembers @objc public class MFFailResponse : ObjectiveC.NSObject, Swift.Error {
   @objc final public let statusCode: Swift.String
   @objc final public let errorDescription: Swift.String
@@ -250,6 +338,24 @@ extension MFSDK.MFPaymentRequest {
     get
   }
   public init?(rawValue: MFSDK.MFAPILanguage.RawValue)
+}
+@objc public enum MFFontFamily : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case sansSerif
+  case arial
+  case timesNewRoman
+  case helvetica
+  case tahoma
+  case verdana
+  case monaco
+  case georgia
+  case courierNew
+  case garamond
+  case trebuchetMS
+  public var rawValue: MFSDK.MFFontFamily.RawValue {
+    get
+  }
+  public init?(rawValue: MFSDK.MFFontFamily.RawValue)
 }
 @objc @objcMembers public class MFSupplier : ObjectiveC.NSObject, Swift.Codable {
   @objc public var supplierCode: Swift.Int
@@ -280,6 +386,12 @@ extension MFSDK.MFPaymentRequest {
   dynamic public func cancelRecurringPayment(recurringId: Swift.String, apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (Swift.Bool, MFSDK.MFFailResponse?) -> Swift.Void)
   public func cancelRecurringPayment(recurringId: Swift.String, apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (Swift.Result<Swift.Bool, MFSDK.MFFailResponse>) -> Swift.Void)
 }
+@_hasMissingDesignatedInitializers @objcMembers @objc public class MFCallbackResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let cardBrand: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
 @objcMembers @objc public class MFExecutePaymentRequest : ObjectiveC.NSObject {
   @objc public var customerName: Swift.String
   @objc public var customerCivilId: Swift.String
@@ -300,11 +412,16 @@ extension MFSDK.MFPaymentRequest {
   @objc public var suppliers: [MFSDK.MFSupplier]
   @objc public var sessionId: Swift.String
   @objc public var recurringModel: MFSDK.MFRecurringModel?
-  @objc public init(invoiceValue: Foundation.Decimal, paymentMethod: Swift.Int, callBackUrl: Swift.String, errorUrl: Swift.String)
+  @objc public var processingDetails: MFSDK.MFProcessingDetails?
+  @objc @available(*, deprecated, message: "callBackURL and errorURL are no longer in use")
+  public init(invoiceValue: Foundation.Decimal, paymentMethod: Swift.Int, callBackUrl: Swift.String, errorUrl: Swift.String)
   @objc public init(invoiceValue: Foundation.Decimal, paymentMethod: Swift.Int)
   @objc public init(invoiceValue: Foundation.Decimal)
   @objc public init(invoiceValue: Foundation.Decimal, displayCurrencyIso: MFSDK.MFCurrencyISO)
   @objc deinit
+}
+extension MFSDK.MFPaymentRequest {
+  public func executeTokenPayment(updateSessionRequest: MFSDK.MFUpdateSessionRequest, paymentRequest: MFSDK.MFExecutePaymentRequest, apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (Swift.Result<MFSDK.MFPaymentStatusResponse, MFSDK.MFFailResponse>, _ invoiceId: Swift.String?) -> Swift.Void)
 }
 @objcMembers @objc public class MFInvoiceItem : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let itemName: Swift.String
@@ -330,6 +447,22 @@ extension MFSDK.MFPaymentRequest {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
+@objc @_inheritsConvenienceInitializers public class MFApplePay : ObjectiveC.NSObject {
+  public var didLoad: (() -> Swift.Void)?
+  public var vendorName: Swift.String?
+  @objc override dynamic public init()
+  public func setupApplePay(_ initiateSession: MFSDK.MFInitiateSessionResponse, _ request: MFSDK.MFExecutePaymentRequest, _ apiLanguage: MFSDK.MFAPILanguage, completion: ((Swift.Result<Swift.Bool, MFSDK.MFFailResponse>) -> Swift.Void)? = nil)
+  public func openPaymentSheet(completion: @escaping (Swift.Result<MFSDK.MFCallbackResponse, MFSDK.MFFailResponse>) -> Swift.Void)
+  public func executePayment(request: MFSDK.MFExecutePaymentRequest? = nil, completion: @escaping (Swift.Result<MFSDK.MFPaymentStatusResponse, MFSDK.MFFailResponse>, _ invoiceId: Swift.String?) -> Swift.Void)
+  public func update(amount: Swift.Double)
+  @objc deinit
+}
+extension MFSDK.MFApplePay : WebKit.WKScriptMessageHandler {
+  @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+extension MFSDK.MFApplePay : WebKit.WKUIDelegate, WebKit.WKNavigationDelegate {
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+}
 @objc @_inheritsConvenienceInitializers @available(swift, obsoleted: 1.0)
 @objcMembers public class MFEnumRawValue : ObjectiveC.NSObject {
   @objc public class func rawValue(mobileISO: MFSDK.MFMobileCountryCodeISO) -> Swift.String
@@ -343,6 +476,7 @@ extension MFSDK.MFPaymentRequest {
   @objc public func setBorderRadius(_ borderRadius: CoreFoundation.CGFloat)
   @objc public func setButtonText(_ _buttonText: Swift.String)
   @objc public func hideLoadingIndicator(_ isHidden: Swift.Bool)
+  @objc public func setVendorame(_ name: Swift.String)
   @objc public func build() -> MFSDK.MFInApplePayConfigureBuilder
   @objc override dynamic public init()
   @objc deinit
@@ -354,6 +488,10 @@ extension MFSDK.MFPaymentRequest {
   @objc @available(swift, obsoleted: 1.0)
   public init(recurringTypeEnum: MFSDK.MFRecurringTypeEnum, intervalDays: Swift.Int, iteration: Swift.Int)
   public init(recurringType: MFSDK.MFRecurringType, iteration: Swift.Int = 0)
+  @objc deinit
+}
+@objcMembers @objc public class MFUpdateSessionRequest : ObjectiveC.NSObject {
+  @objc public init(sessionId: Swift.String, tokenType: MFSDK.MFPaymentProvider, token: Swift.String, securityCode: Swift.String? = nil)
   @objc deinit
 }
 @objcMembers @objc public class MFDirectPaymentResponse : ObjectiveC.NSObject {
@@ -389,6 +527,14 @@ extension MFSDK.MFPaymentRequest {
 @objc public protocol MFPaymentDelegate {
   @objc func didInvoiceCreated(invoiceId: Swift.String)
 }
+@_inheritsConvenienceInitializers @objcMembers @objc public class MFCustomerToken : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var token: Swift.String?
+  @objc public var cardNumber: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
 extension MFSDK.MFPaymentRequest {
   @objc @available(swift, obsoleted: 1.0)
   dynamic public func initiatePayment(request: MFSDK.MFInitiatePaymentRequest, apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (MFSDK.MFInitiatePaymentResponse?, MFSDK.MFFailResponse?) -> Swift.Void)
@@ -411,10 +557,11 @@ extension MFSDK.MFPaymentRequest {
   public func initiateSession(request: MFSDK.MFInitiateSessionRequest? = nil, apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (Swift.Result<MFSDK.MFInitiateSessionResponse, MFSDK.MFFailResponse>) -> Swift.Void)
 }
 @objcMembers @objc public class MFInitiateSessionRequest : ObjectiveC.NSObject {
-  @objc public init(customerIdentifier: Swift.String)
+  public init(customerIdentifier: Swift.String, saveToken: Swift.Bool? = nil)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers @IBDesignable @_Concurrency.MainActor(unsafe) public class MFPaymentCardView : UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) weak public var delegate: MFSDK.MFCardViewDelegate?
   @objc @_Concurrency.MainActor(unsafe) public var configure: MFSDK.MFCardConfigureBuilder {
     @objc get
     @objc set
@@ -422,11 +569,14 @@ extension MFSDK.MFPaymentRequest {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
   @objc @_Concurrency.MainActor(unsafe) public func load(initiateSession: MFSDK.MFInitiateSessionResponse, binDidChangeCompletion: ((Swift.String) -> Swift.Void)? = nil)
   @objc @available(swift, obsoleted: 1.0)
   @_Concurrency.MainActor(unsafe) public func pay(_ request: MFSDK.MFExecutePaymentRequest, _ apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (MFSDK.MFPaymentStatusResponse?, MFSDK.MFFailResponse?, _ invoiceId: Swift.String?) -> Swift.Void)
   @_Concurrency.MainActor(unsafe) public func pay(_ request: MFSDK.MFExecutePaymentRequest, _ apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (Swift.Result<MFSDK.MFPaymentStatusResponse, MFSDK.MFFailResponse>, _ invoiceId: Swift.String?) -> Swift.Void)
-  @objc deinit
+  @objc @available(swift, obsoleted: 1.0)
+  @_Concurrency.MainActor(unsafe) public func validate(validateSessionCompletionObjC: @escaping (Swift.String?, MFSDK.MFFailResponse?) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public func validate(validateSessionCompletion: @escaping (Swift.Result<Swift.String, MFSDK.MFFailResponse>) -> Swift.Void)
 }
 extension MFSDK.MFPaymentCardView : WebKit.WKScriptMessageHandler {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
@@ -438,6 +588,7 @@ extension MFSDK.MFPaymentRequest {
   @available(iOS 13.0, *)
   public func executeApplePayPayment(request: MFSDK.MFExecutePaymentRequest, apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (Swift.Result<MFSDK.MFPaymentStatusResponse, MFSDK.MFFailResponse>, _ invoiceId: Swift.String?) -> Swift.Void)
 }
+public typealias PaymentCompletionHandler = ((Swift.Result<MFSDK.MFPaymentStatusResponse, MFSDK.MFFailResponse>, _ invoiceId: Swift.String?) -> Swift.Void)
 @objc public enum MFCurrencyISO : Swift.Int, Swift.RawRepresentable {
   public typealias RawValue = Swift.String
   case kuwait_KWD
@@ -617,6 +768,16 @@ extension MFSDK.MFPaymentRequest {
   }
   public init?(rawValue: MFSDK.MFCurrencyISO.RawValue)
 }
+public enum MFJSEvent : Swift.String {
+  case executePayment
+  case binDidChange
+  case cardSizeChanged
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 @objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor(unsafe) public class MFApplePayButton : UIKit.UIView {
   @objc @_Concurrency.MainActor(unsafe) public var configure: MFSDK.MFInApplePayConfigureBuilder {
     @objc get
@@ -628,6 +789,13 @@ extension MFSDK.MFPaymentRequest {
   @objc @available(swift, obsoleted: 1.0)
   @_Concurrency.MainActor(unsafe) public func load(_ initiateSession: MFSDK.MFInitiateSessionResponse, _ request: MFSDK.MFExecutePaymentRequest, _ apiLanguage: MFSDK.MFAPILanguage, startLoading: (() -> Swift.Void)? = nil, completion: @escaping (MFSDK.MFPaymentStatusResponse?, MFSDK.MFFailResponse?, _ invoiceId: Swift.String?) -> Swift.Void)
   @_Concurrency.MainActor(unsafe) public func load(_ initiateSession: MFSDK.MFInitiateSessionResponse, _ request: MFSDK.MFExecutePaymentRequest, _ apiLanguage: MFSDK.MFAPILanguage, startLoading: (() -> Swift.Void)? = nil, completion: @escaping (Swift.Result<MFSDK.MFPaymentStatusResponse, MFSDK.MFFailResponse>, _ invoiceId: Swift.String?) -> Swift.Void)
+  @objc @available(swift, obsoleted: 1.0)
+  @_Concurrency.MainActor(unsafe) public func display(_ initiateSession: MFSDK.MFInitiateSessionResponse, _ request: MFSDK.MFExecutePaymentRequest, _ apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (MFSDK.MFCallbackResponse?, MFSDK.MFFailResponse?) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public func display(_ initiateSession: MFSDK.MFInitiateSessionResponse, _ request: MFSDK.MFExecutePaymentRequest, _ apiLanguage: MFSDK.MFAPILanguage, completion: @escaping (Swift.Result<MFSDK.MFCallbackResponse, MFSDK.MFFailResponse>) -> Swift.Void)
+  @objc @available(swift, obsoleted: 1.0)
+  @_Concurrency.MainActor(unsafe) public func executePayment(request: MFSDK.MFExecutePaymentRequest? = nil, completion: @escaping (MFSDK.MFPaymentStatusResponse?, MFSDK.MFFailResponse?, _ invoiceId: Swift.String?) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public func executePayment(request: MFSDK.MFExecutePaymentRequest? = nil, completion: @escaping (Swift.Result<MFSDK.MFPaymentStatusResponse, MFSDK.MFFailResponse>, _ invoiceId: Swift.String?) -> Swift.Void)
+  @objc @_Concurrency.MainActor(unsafe) public func update(amount: Swift.Double)
   @objc deinit
 }
 extension MFSDK.MFApplePayButton : WebKit.WKScriptMessageHandler {
@@ -737,6 +905,8 @@ public enum MFRecurringType {
   @objc override dynamic public init()
   @objc deinit
 }
+extension MFSDK.MFPaymentProvider : Swift.Equatable {}
+extension MFSDK.MFPaymentProvider : Swift.Hashable {}
 extension MFSDK.MFKeyType : Swift.Equatable {}
 extension MFSDK.MFKeyType : Swift.Hashable {}
 extension MFSDK.MFEnvironment : Swift.Equatable {}
@@ -745,16 +915,23 @@ extension MFSDK.MFNotificationOption : Swift.Equatable {}
 extension MFSDK.MFNotificationOption : Swift.Hashable {}
 extension MFSDK.MFCountry : Swift.Equatable {}
 extension MFSDK.MFCountry : Swift.Hashable {}
+extension MFSDK.MFFontWeight : Swift.Equatable {}
+extension MFSDK.MFFontWeight : Swift.Hashable {}
 extension MFSDK.MFPaymentMethodCode : Swift.Equatable {}
 extension MFSDK.MFPaymentMethodCode : Swift.Hashable {}
 extension MFSDK.MFPaymentype : Swift.Equatable {}
 extension MFSDK.MFPaymentype : Swift.Hashable {}
 extension MFSDK.MFAPILanguage : Swift.Equatable {}
 extension MFSDK.MFAPILanguage : Swift.Hashable {}
+extension MFSDK.MFFontFamily : Swift.Equatable {}
+extension MFSDK.MFFontFamily : Swift.Hashable {}
 extension MFSDK.MFLanguage : Swift.Equatable {}
 extension MFSDK.MFLanguage : Swift.Hashable {}
 extension MFSDK.MFCurrencyISO : Swift.Equatable {}
 extension MFSDK.MFCurrencyISO : Swift.Hashable {}
+extension MFSDK.MFJSEvent : Swift.Equatable {}
+extension MFSDK.MFJSEvent : Swift.Hashable {}
+extension MFSDK.MFJSEvent : Swift.RawRepresentable {}
 extension MFSDK.MFMobileCountryCodeISO : Swift.Equatable {}
 extension MFSDK.MFMobileCountryCodeISO : Swift.Hashable {}
 extension MFSDK.MFRecurringTypeEnum : Swift.Equatable {}
